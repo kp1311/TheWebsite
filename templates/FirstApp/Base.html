@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap3 %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Base</title>
+<link rel="stylesheet" href="{% static "css/mystyle.css"%}">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+
+  <body >
+<div id="header">
+<div class="container" style="background-color: rgba(255, 255, 255, 0.85)">
+
+<nav class="navbar navbar-default">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">The Resources</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+      <li class="active"><a href="#">Home</a></li>
+     <li><a href="{% url 'FirstApp:Personal_Development' %}">Personal Development</a></li>
+     <li><a href="{% url 'FirstApp:Professional_Development' %}">Professional Development</a></li>
+     <li><a href="{% url 'FirstApp:Financial_Success' %}">Financial Success</a></li>
+        <li><a href="{% url 'FirstApp:Registration' %}">Register</a></li>
+           <li><a href="{% url 'FirstApp:NewPage' %}">Whats New</a></li>
+              <li><a href="{% url 'FirstApp:CommentsandSuggestions' %}">Comments and suggestions</a></li>
+            </ul>
+
+           </nav>
+
+
+<p>
+    ||  <a href="{%url 'FirstApp:GetAJob'%}">Get A High PayingJob</a>  ||
+     <a href="{% url 'FirstApp:Professional_Development' %}">Increase salary</a>  ||
+     <a href="{% url 'FirstApp:MyLibrary' %}">My Library</a>  ||
+     <a href="{%url 'FirstApp:MyGoal'%}">My Goal </a> ||
+
+           <a href="{%url 'FirstApp:Challenge'%}">Challenges</a>  ||
+            <a href="{%url 'FirstApp:AdvicePathsExperienceResources'%}">AdvicePathsExperienceResources</a>    ||
+</p>
+
+
+         </nav>
+
+{%if user.is_authenticated%}
+<a href="{%url 'logout'%}">Logout</a>
+{%else%}
+<a href="{%url 'FirstApp:user_login'%}">login</a>
+
+{%endif%}
+
+
+
+<p>
+<img src="{%static "images/SuccessStartshere.jpg"%}" alt="Did not show" height="200" width="300">
+
+</p>
+<HR>
+
+
+
+
+
+   {%block Body_Block%}
+<div >
+
+<h1> Welcome to The Resources</h1><br>
+<h2>On our website you get to know the best resources in the world on personal development,
+  <br>professional development and financial success which will enable you to live a wonderful life</h2><br><br>
+<h3>In personal development you will receive info on family life,physical health,<br>
+mental health,career advice, and financial independence,this information alone<br>
+ has the potential to change your life for good forever.</h3>
+  <h3> <a href="{% url 'FirstApp:Personal_Development' %}">Visit Personal Development Page</a><h3><br><hr>
+
+ <h3>In Professional Development you will learn what the best learnt to be<br>
+   the best in their field,so that you could become the best at what you do as well.<br>
+   This section will enable you to geta high paying job in any area of endevour<br>
+   as well as get resources that will enable you to increase your income by <br>
+  2x,3x,4x,5x and 10x.</h3>
+<h3>  <a href="{% url 'FirstApp:Professional_Development' %}">Visit Professional Development Page </a></h3><br><hr>
+
+  <h3>Earning a high income doesnot equals being financially rich,fianacial success<br>
+  is not about not about what you earn but baout what you keep,In this section <br>
+  you will get the best information in the world on topic of financial succeess<br>
+  which wil enable you to be fianacially rich and let your money earn money.
+</h3>
+<h3><a href="{% url 'FirstApp:Financial_Success' %}">Visit Financial Success Page</a></h3><br><br><hr>
+
+<h1>Have a wonderful life now</h1><hr>
+
+{%endblock%}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+</div>
+  </body>
+</html>

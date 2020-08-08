@@ -1,0 +1,29 @@
+{%extends "FirstApp/Base.html"%}
+    
+
+{%block Body_Block%}
+
+   Know about a good resource that you dont find on our website,<br>
+   Add it to the Website.<br>
+
+ <a href="{% url 'FirstApp:AddResource' %}">Add a resource</a>
+
+
+ <ol>
+   {%for resource in Resource%}
+
+
+   <li><b>Title:{{resource.Title}}</b></li>
+   <b>Author:</b>{{resource.Author}}<br>
+   <b>Description</b>{{resource.Descrpition}}<br>
+ <b>Url to resource</b>{{resource.Url}}<br>
+ <b>Type</b>  {{resource.Type}}<br>
+   <b>Cost</b>Indian Ruppess : {{resource.Price}}<br>
+
+
+   <br><br>
+
+   {%endfor%}
+ </ol>
+
+{%endblock%}

@@ -1,0 +1,32 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+
+  <h1>Welcome to our what's new page</h1>
+  <h3>Select a field form the below dropdown menu to know about the latest and
+    <br>geatest information resources in that field.</h3>
+
+    <br><br>
+    <form action="{%url 'FirstApp:NewPageDetails'%}" >
+
+      <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <option selected="selected" disabled>Field</option>
+        <option >Backup</option>
+        <option >Bank_Po</option>
+        <option >Business</option>
+        <option >CAT</option>
+        <option >IAS</option>
+        <option >GMAT</option>
+        <option >Linux</option>
+        <option >Medical</option>
+        <option >Networking</option>
+        <option >Software development</option>
+        <option >SSC_CGL</option>
+        <option >Storage</option>
+        <option >Wintel</option>
+      </select>
+      <input type="submit" value="Select">
+
+
+
+    </form>
+{%endblock%}

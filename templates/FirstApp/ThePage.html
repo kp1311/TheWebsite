@@ -1,0 +1,27 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+
+{%for detail in AllDetails%}
+
+<h2>{{detail.field}}</h2>
+<b>Name :</b>{{detail.User_Name}} <b>Company :</b>{{detail.Company}}<br>
+_____________________________________________________________<br>
+<b>Target Section :</b>{{detail.Target_Section}}<br>
+<b>Advice :</b>{{detail.AdviceforGoalAttainment}}<br>
+<b>Self Experience :</b>{{detail.SelfExperience}}<br>
+<b>Paths :</b>{{detail.Paths}}<br>
+<b>Resources Used :</b>{{detail.ResourcesUsed}}<br><br>
+
+{%endfor%}
+  {%endblock%}
+
+
+  User_Name=models.CharField(max_length=50)
+    Role=models.CharField(max_length=50)
+    Company=models.CharField(max_length=50)
+    field=models.CharField(max_length=50)
+    Target_Section=models.CharField(max_length=25)
+    AdviceforGoalAttainment=models.TextField()
+    SelfExperience=models.TextField()
+    Paths=models.TextField()
+    ResourcesUsed=models.TextField()

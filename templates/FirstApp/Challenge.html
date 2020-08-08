@@ -1,0 +1,22 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+{% load bootstrap3 %}
+    <h2>There are two challenges for you.</h2>
+
+   <h3>Hours challenge</h3>
+   <br>
+    In this challenge you have to study an hour a day for your <u>chosen field</u>.<br>
+    By accomplishing this challenge you will become  the best in your field in <br>
+    3 years.In 5 Years you will become the best in your country<br>
+    In 7 years you will become best in the world at what you do.<br>
+    And consequently one of the highest income earners in your field.<br>
+    <a href="{% url 'FirstApp:Challenge1' %}">Accept this challenge</a><br>
+    =========================================================================<br>
+<h3>A book a month challenge</h3>
+   <br>In this challenge you have to read a book a month in your <u>chosen field</u> <br>
+   of work.
+   The Benefit you receive by accompishing this chalenge is ,you will become<br>
+    the top 1% income earner in your chosen field.</br>
+
+   <a href="{% url 'FirstApp:Challenge2' %}">Accept this challenge.</a>
+  {%endblock%}

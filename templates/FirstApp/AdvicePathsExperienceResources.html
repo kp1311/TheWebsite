@@ -1,0 +1,31 @@
+{%extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+<a href="{%url 'FirstApp:AddExperience'%}">Add your experience </a><br>
+Here we provide you advice and guidance form the people who are the best at what they do<br>
+<br>From the below Dropdown menu select the field for which you wnat the advice and guidance</br>
+<br>
+<form action="{%url 'FirstApp:ThePage'%}" >
+
+  <select name="field" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    <option selected="selected" disabled>Field</option>
+    <option >Backup</option>
+    <option >Bank_Po</option>
+    <option >Business</option>
+    <option >CAT</option>
+    <option >IAS</option>
+    <option >GMAT</option>
+    <option >Linux</option>
+    <option >Medical</option>
+    <option >Networking</option>
+    <option >SoftwareDevelopmen</option>
+    <option >SSC_CGL</option>
+    <option >Storage</option>
+    <option >Wintel</option>
+  </select>
+  <input type="submit" class="btn btn-primary" value="Select">
+
+
+
+</form>
+
+  {%endblock%}

@@ -1,0 +1,8 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+<h3>Here are the list of skills and their resources which will enable you to get<br>
+a high paying job in {{Field}} field.</h3>
+    {%for o in AllDetails%}
+     {{o.Url}}
+    {%endfor%}
+  {%endblock%}

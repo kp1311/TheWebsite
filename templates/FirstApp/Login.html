@@ -1,0 +1,11 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+    <form action="{%url 'FirstApp:user_login'%}" method='POST'>
+      {%csrf_token%}
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Enter Username">
+      <label for="password">Password</label>
+      <input type="Password" name="password" placeholder="Enter Password">
+      <input type="Submit" value="Login">
+    </form>
+  {%endblock%}

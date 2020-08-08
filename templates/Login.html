@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"
+    <title>Login </title>
+  </head>
+  <body>
+    <form action="{url 'FirstApp:user_login'}" method='POST'>
+      {%csrf_token%}
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Enter Username">
+      <label for="password">Password</label>
+      <input type="Password" name="password" placeholder="Enter Username">
+    </form>
+  </body>
+</html>

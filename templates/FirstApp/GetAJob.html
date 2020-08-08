@@ -1,0 +1,31 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+    <h1>This is a jobs Page</h1>
+    <h3>Select a field from the below dropdown list in which you want to get<br>
+    a high paying job.</h3>
+    <br><br>
+
+    <form action="{%url 'FirstApp:GetAJobDetail'%}" >
+
+      <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <option selected="selected" disabled>Field</option>
+        <option >Backup</option>
+        <option >Bank_Po</option>
+        <option >Business</option>
+        <option >CAT</option>
+        <option >IAS</option>
+        <option >GMAT</option>
+        <option >Linux</option>
+        <option >Medical</option>
+        <option >Networking</option>
+        <option >Software development</option>
+        <option >SSC_CGL</option>
+        <option >Storage</option>
+        <option >Wintel</option>
+      </select>
+      <input type="submit" class="btn btn-primary" value="Select">
+
+
+
+    </form>
+  {%endblock%}

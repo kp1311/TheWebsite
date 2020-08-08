@@ -1,0 +1,19 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+
+<h3>Hre is the list of the new resources for {{Field}}</h3>
+<br>
+<ol>
+    {%for resource in AllDetails%}
+     <li><b>Title :{{resource.Title}}</b></li><br>
+     <b>Url :</b>{{resource.Url}}<br>
+     <b>Author :</b>{{resource.Author}}<br>
+     <b>Description :</b>{{resource.Descrpition}}
+     <b>Url :</b>{{resource.Url}}<br>
+     <b>Type :</b>{{resource.Type}}<br>
+     <b>Price </b>Indian Ruppees :{{resource.Price}}<br><br>
+    {%endfor%}
+</ol>
+  {%endblock%}
+
+  

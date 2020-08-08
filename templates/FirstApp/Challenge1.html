@@ -1,0 +1,33 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+{% load bootstrap3 %}
+<p>Benefit you receive by accomplishing this challenge</p>
+
+    In this challenge you have to study an hour a day for your chosen field.<br>
+    By accomplishing this challenge you will become  the best in your field in <br>
+    3 years.In 5 Years you will become the best in your country<br>
+    In 7 years you will become best in the world at what you do.<br>
+    And consequently one of the highest income earners in your field.<br>
+
+    Your Status:<br>
+
+            {%for p in Challenge1Status%}
+            Start Date :{{p.Start_Date}}<br>
+            Hours Spent learning :{{p.Hours_spent_learning}}
+            {%endfor%}
+
+
+<br><br><br>
+      <form  method='POST'>
+        {%csrf_token%}
+        <label for="hours">Hours spent learning today</label>
+        <input type="number" name="Time" placeholder="Enter Time">
+        <input type="Submit" value="Login">
+      </form>
+
+
+      {%if message%}<script>
+          alert('{{ message }}');
+      </script>{%endif%}
+
+  {%endblock%}

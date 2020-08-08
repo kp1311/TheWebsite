@@ -1,0 +1,28 @@
+{% extends "FirstApp/Base.html"%}
+{% load bootstrap3 %}
+{%block Body_Block%}
+    <H1>This is your Library.</h1>
+      <h4>Build a virtual library with most important resources in your field.</h4>
+      <ol>
+      {%for resource in MyLibrary%}
+      <li><b>Subject :</b>{{resource.Subject}}<br>
+      <b>Author :</b>{{resource.Author}}<br>
+       <b>Url :</b>{{resource.Url}}<br></li>
+      {%endfor%}
+    </ol>
+
+<br><br><br>
+
+<h3>Enter a resource into your library.</h3>
+      <form method="POST" class="form">
+
+      {% csrf_token %}
+      {% bootstrap_form forms %}
+      {% buttons %}
+          <button type="submit" class="btn btn-primary">Submit</button>
+      {% endbuttons %}
+  </form>
+  {%if message%}<script>
+      alert('{{ message }}');
+  </script>{%endif%}
+{%endblock%}

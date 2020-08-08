@@ -1,0 +1,65 @@
+{% extends "FirstApp/Base.html"%}
+
+{%block Body_Block%}
+{% load bootstrap3 %}
+
+<h1>This is the ultimate thing,<br>GOALS</h1>
+ Goal play such an important role in success that we have devted a seperate <br>
+ page to it.This is one of the most important page on this website.<br>
+ <h4>Do this one thing and it will change your life forever.</h4>
+<br>
+ A person with a goal accomplishes vastly more than a person who does not set goal<br>
+ Here is a life changing video to on goals.<br>
+ <a href="https://www.youtube.com/watch?v=XktHAwYK1Xw">Go to video</a>
+<br><br><br>
+<p>
+  <hr>
+<h4>  The goals checklist:(on this site we are primarily focused on career goals right now.)</h4<br>
+  <ol>
+    <li>I have a clear ,specific goal.</li>
+  <li>I have set a deadline to achieve that goal.</li>
+  <li>I found out the specialized knowledge and skills that  I need to achieve the goal.</li>
+  <li>I have listed all the things i need to do or practice in order to achieve the goal.</li>
+  <li>I have oraganized the list into a sequence of steps that I need to take in order<br>
+       to achieve my goal.
+  <li>I know which 20% of the things will produce 80% of the result.<li>
+  <li>I have set aside a specific block of time everyday(one hour or even more) to work <br>
+  on my goal.
+
+  <li>I do something  every single day in the specified time to achieve my goal.<li><br><br><br>
+</ol>
+  If the answer to all above steps is Yes then soon you will meets success at<br>
+  your biggest goals in common hours.<br><br><br>
+
+  <b>Best of luck and happy journey</b>
+
+</p>
+
+The above mentioned paragraph is the secret to huge success.
+
+<h4><b>TIP:Set big goals</b></h4>
+<h4><b>Target one Career.</b></h4>
+<hr>
+<br><br><br>
+
+    <H1>Here is your goal.</h1>
+
+      <ol>
+      {%for g in goal%}
+      <li><b>Subject skill :</b >{{g.Goal_subject}}<br>
+      <b>Url :</b>{{g.Subject_Url}}</li>
+      {%endfor%}
+ </ol>
+
+      <form method="POST" class="form">
+
+      {% csrf_token %}
+      {% bootstrap_form forms %}
+      {% buttons %}
+          <button type="submit" class="btn btn-primary">Submit</button>
+      {% endbuttons %}
+  </form>
+  {%if message%}<script>
+      alert('{{ message }}');
+  </script>{%endif%}
+{%endblock%}

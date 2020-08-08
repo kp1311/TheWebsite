@@ -1,0 +1,24 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+{% load bootstrap3 %}
+   <h1>Thank you for giving us an opprtunity to serve you, it means a lot to us.</h1>
+   <h3>Please tell us about your experience with us,tell us about what you liked
+     <br>and what you want us to do so that we could serve you even better next
+     <br> time,we would love to hear from you.<h3>
+
+       <br><br>
+
+
+    <form method="POST" class="form">
+
+    {% csrf_token %}
+    {% bootstrap_form forms %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+</form>
+
+{%if message%}<script>
+    alert('{{ message }}');
+</script>{%endif%}
+  {%endblock%}

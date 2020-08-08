@@ -1,0 +1,44 @@
+
+
+td{
+height:100px;
+width:250px;
+}
+
+
+
+table, th, td {
+  border: 1px solid black;
+  margin: 0 auto;
+  text-align:center;
+
+}
+body {
+    text-align: center;
+
+}
+form {
+    display: inline-block;
+
+}
+/* unvisited link */
+a:link {
+  color: blue;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* selected link */
+a:active {
+  color: red;
+}
+
+#header{
+    background-image: url('../images/SuccessStartshere.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}

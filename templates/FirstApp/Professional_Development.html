@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "FirstApp/Base.html"%}
+
+{%block Body_Block%}
+{% load static %}
+<h1>Welcome to Professional development page</h1>
+<h3>This page contains a list various fields ,we provide you the best resources in each<br>
+   of these fields which will enable you to get a high paying job, increase your <br>
+   salry by 2x,3x,4x,5x and 10x or simply ,become one of the best in the <b>world</b> <br>
+   at what you do. </h3>
+
+<link rel="stylesheet" href="{% static "css/mystyle.css"%}">
+<br><br>
+<table>
+<tr><td ><a href="{% url 'FirstApp:Backup' %}">Backup(Infra)</a></td> <td> <a href="{% url 'FirstApp:Bank_Po' %}">Bank_Po</a></td> <td> <a href="{% url 'FirstApp:Business' %}">Business</a></td> <td> <a href="{% url 'FirstApp:CAT' %}">CAT</a></td></tr>
+<tr><td> <a href="{% url 'FirstApp:Database' %}">Database(Infra)></a></td> <td> <a href="{% url 'FirstApp:GMAT' %}">GMAT</a></td> <td> <a href="{% url 'FirstApp:IAS' %}">IAS</a></td> <td> <a href="{% url 'FirstApp:Linux' %}">Linux(Infra)</a></td></tr>
+<tr><td> <a href="{% url 'FirstApp:Medical' %}">Medical</a></td> <td> <a href="{% url 'FirstApp:Networking' %}">Networking(Infra)</a></td> <td> <a href="{% url 'FirstApp:Software_Development' %}">Software_Developmemt</a></td> <td> <a href="{% url 'FirstApp:SSC_CGL' %}">SSC_CGL</a></td></tr>
+<tr><td> <a href="{% url 'FirstApp:Storage' %}">Storage</a></td> <td> <a href="{% url 'FirstApp:Swimming' %}">Swimming</a></td> <td> <a href="{% url 'FirstApp:Wintel' %}">Wintel(Infra)</a></td> <td> <a href="#"></a></td></tr>
+</table>
+
+
+{%endblock%}

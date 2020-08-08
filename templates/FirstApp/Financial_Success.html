@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+
+
+<h1>Welcome to Financial Success Page</h1>
+<h3>Earning a lot of money does not equal riches,you need to be able to keep a<br>
+   part of the money earned,this section of the website provides you the best<br>
+ information available in the world on how to keep a portion of what you earn<br> and let it grow itself.
+ </h3>
+<br>
+<table>
+
+<tr><td><a href="{%url 'FirstApp:BrianTracyFinancialSuccess'%}">Brian Tracy</a></td>
+  <td><a href="{%url 'FirstApp:RobertKiyosakiFinancialSuccess' %}">Robert Kiyosaki</a></td>
+  <td><a href="{%url 'FirstApp:TonyRobbinsFinancialSuccess'%}">Tony Robbins</a></td>
+  <td><a href="{%url 'FirstApp:OtherFinancialSuccess'%}">Others</a></td></tr>
+</table>
+
+{%endblock%}

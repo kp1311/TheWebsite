@@ -1,0 +1,14 @@
+{% extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+    Know a good Personal Development Resource that you can't find on the website,Add it to the website.
+   <a href="{% url 'FirstApp:Add_Personal_Development_Resource' %}">Add a resource</a>
+   <ol>
+      {%for resource in Resource %}
+      <li><b>Name :</b>{{resource.Name_Of_Resource}}</li><br>
+      <b>Url :</b>{{resource.Url}}<br>
+       <b>Type :</b>{{resource.Type}}<br>
+       <b>Price</b>{{resource.Price}}<br><br>
+      {%endfor%}
+   </ol>
+
+{%endblock%}
