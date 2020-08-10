@@ -169,12 +169,12 @@ def AddResourceView(request):
 
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            return render(request,'FirstApp/AddResource.html',{'forms':form,"message":"Thank you.Your response has been saved."})
 
-        else:
-            print("Invalid form")
+        
 
-    return render(request,'FirstApp/AddResource.html',{'forms':form,"message":"Thsnk you.Your response has been saved."})
+
+    return render(request,'FirstApp/AddResource.html',{'forms':form})
 
 def BrianTracyView(request):
     ResourceList=Personal_Development_Resources.objects.filter(Author="Brian Tracy")
