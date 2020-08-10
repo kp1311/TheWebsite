@@ -55,7 +55,7 @@ url(r'^GetAJob/$',views.GetAJobView,name='GetAJob'),
 url(r'^GetAJobDetail/$',views.GetAJobDetailView,name='GetAJobDetail'),
 url(r'^NewPage/$',views.NewPageView,name='NewPage'),
 url(r'^NewPageDetails/$',views.NewPageDetailsView,name='NewPageDetails'),
-url(r'^CommentsandSuggestions/$',views.CommentsandSuggestionsView,name='CommentsandSuggestions'),
+url(r'^CommentsAndSuggestions/$',views.CommentsAndSuggestionsView,name='CommentsAndSuggestions'),
 
 
 ]

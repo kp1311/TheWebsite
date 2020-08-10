@@ -435,7 +435,7 @@ def NewPageDetailsView(request):
     AllDetails=Professional_Resources.objects.filter(Field=field_variable).filter(Released_On__lt=previous_date)
     return render(request,'FirstApp/NewPageDetails.html',{'AllDetails':AllDetails,'Field':field_variable})
 
-def CommentsandSuggestionsView(request):
+def CommentsAndSuggestionsView(request):
     form=CommentsandSuggestionsForm()
 
     if request.method=='POST':
@@ -443,7 +443,7 @@ def CommentsandSuggestionsView(request):
 
         if form.is_valid():
             form.save(commit=True)
-            print("inside form sections")
-            return render(request,'FirstApp/CommentsandSuggestions.html',{'forms':form,'message':"Your suggestions and comments have been recorded."})
 
-    return render(request,'FirstApp/CommentsandSuggestions.html',{'forms':form})
+            return render(request,'FirstApp/CommentsAndSuggestions.html',{'forms':form,'message':"Your suggestions and comments have been recorded."})
+
+    return render(request,'FirstApp/CommentsAndSuggestions.html',{'forms':form})
