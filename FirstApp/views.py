@@ -171,7 +171,7 @@ def AddResourceView(request):
             form.save(commit=True)
             return render(request,'FirstApp/AddResource.html',{'forms':form,"message":"Thank you.Your response has been saved."})
 
-        
+
 
 
     return render(request,'FirstApp/AddResource.html',{'forms':form})
@@ -260,28 +260,12 @@ def AddPersonalDevelopmentResourceView(request):
             return render(request,'FirstApp/Add_Personal_Development_Resource.html',{'forms':form,'message':"Thank You.Your data has been saved"})
 
 
-        else:
-            print("Invalid form")
-
     return render(request,'FirstApp/Add_Personal_Development_Resource.html',{'forms':form})
 
 
-def BrianTracyFinancialSuccessView(request):
-    ResourceList=Financial_Success_Resources.objects.filter(Author="Brian Tracy")
-    return render(request,'FirstApp/BrianTracyFinancialSuccess.html',{'Resource':ResourceList})
-
-
-def RobertKiyosakiFinancialSuccessView(request):
-    ResourceList=Financial_Success_Resources.objects.filter(Author="Robert Kiyosaki")
-    return render(request,'FirstApp/RobertKiyosakiFinancialSuccess.html',{'Resource':ResourceList})
-
-def TonyRobbinsFinancialSuccessView(request):
-    ResourceList=Financial_Success_Resources.objects.filter(Author="Tony Robbins")
-    return render(request,'FirstApp/TonyRobbinsFinancialSuccess.html',{'Resource':ResourceList})
-
-def OtherFinancialSuccessView(request):
-    ResourceList=Financial_Success_Resources.objects.filter(Author="Other")
-    return render(request,'FirstApp/OtherFinancialSuccess.html',{'Resource':ResourceList})
+def FinancialSuccessView(request):
+    ResourceList=Financial_Success_Resources.objects.all()
+    return render(request,'FirstApp/Financial_Success.html',{'Resource':ResourceList})
 
 def Add_Financial_Success_ResourceView(request):
     form=Financial_Success_ResourcesForm()
@@ -291,9 +275,6 @@ def Add_Financial_Success_ResourceView(request):
         if form.is_valid():
             form.save(commit=True)
             return render(request,'FirstApp/Add_Financial_Success_Resource.html',{'forms':form,"message":"Thank You.You data has been saved."})
-
-        else:
-            print("Invalid form")
 
     return render(request,'FirstApp/Add_Financial_Success_Resource.html',{'forms':form})
 

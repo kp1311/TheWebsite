@@ -1,21 +1,31 @@
-<!DOCTYPE html>
+{%extends "FirstApp/Base.html"%}
+    <title>Backup</title>
 
-{% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
 
+   Know about a good resource that you dont find on our website,<br>
+   Add it to the Website.<br>
 
-<h1>Welcome to Financial Success Page</h1>
-<h3>Earning a lot of money does not equal riches,you need to be able to keep a<br>
-   part of the money earned,this section of the website provides you the best<br>
- information available in the world on how to keep a portion of what you earn<br> and let it grow itself.
- </h3>
-<br>
-<table>
+ <a href="{% url 'FirstApp:Add_Financial_Success_Resource' %}">Add a resource</a>
 
-<tr><td><a href="{%url 'FirstApp:BrianTracyFinancialSuccess'%}">Brian Tracy</a></td>
-  <td><a href="{%url 'FirstApp:RobertKiyosakiFinancialSuccess' %}">Robert Kiyosaki</a></td>
-  <td><a href="{%url 'FirstApp:TonyRobbinsFinancialSuccess'%}">Tony Robbins</a></td>
-  <td><a href="{%url 'FirstApp:OtherFinancialSuccess'%}">Others</a></td></tr>
-</table>
+
+ <ol>
+   {%for resource in Resource%}
+
+
+   <li><b>Title :{{resource.Title}}</b></li>
+   <b>Author :</b>{{resource.Author}}<br>
+   <b>Description :</b>{{resource.Descrpition}}<br>
+ <b>Url to resource :</b>{{resource.Url}}<br>
+ <b>Type :</b>  {{resource.Type}}<br>
+   <b>Cost</b>Indian Ruppess : {{resource.Price}}<br>
+
+
+   <br><br>
+
+   {%endfor%}
+ </ol>
+
+
 
 {%endblock%}
