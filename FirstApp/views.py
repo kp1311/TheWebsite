@@ -141,6 +141,13 @@ def WintelView(request):
 
     return render(request,'FirstApp/Wintel.html',{'Resource':ResourceList})
 
+def LawView(request):
+    ResourceList=Professional_Resources.objects.filter(Field="Law")
+
+
+    return render(request,'FirstApp/Law.html',{'Resource':ResourceList})
+
+
 #This view is for Personal Development page
 def Personal_Development(request):
     return render(request,'FirstApp/Personal_Development.html')
