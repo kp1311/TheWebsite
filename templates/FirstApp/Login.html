@@ -8,4 +8,8 @@
       <input type="Password" name="password" placeholder="Enter Password">
       <input type="Submit" value="Login">
     </form>
+
+    {%if message%}<script>
+        alert('{{ message }}');
+    </script>{%endif%}
   {%endblock%}

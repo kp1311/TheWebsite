@@ -300,41 +300,53 @@ def user_login(request):
     else:
          return render (request,'FirstApp/Login.html',{})
 
-@login_required
+
 def MyGoalView(request):
-    My_goal= MyGoal.objects.filter(user=request.user)
+    if request.user.is_authenticated:
+       My_goal= MyGoal.objects.filter(user=request.user)
 
-    form=MyGoalForm()
+       form=MyGoalForm()
 
 
-    if request.method=="POST":
-        form=MyGoalForm(request.POST)
+       if request.method=="POST":
+          form=MyGoalForm(request.POST)
 
-        if form.is_valid():
-            form.save(commit=True)
-            return index(request)
+          if form.is_valid():
+             form.save(commit=True)
+             return index(request)
 
-        else:
-            print("Invalid form")
+          else:
+              print("Invalid form")
 
-    return render(request,'FirstApp/MyGoal.html',{'forms':form,'goal':My_goal,"message":"Your data has been saved"})
+       else:
+           return render(request,'FirstApp/MyGoal.html',{'forms':form,'goal':My_goal})
 
-@login_required
+    else:
+         return render(request,'FirstApp/Login.html',{"message":"You need to login to view this page"})
+
+
+
+
 def MyLibraryView(request):
-    My_Library= MyLibrary.objects.filter(user=request.user)
+    if request.user.is_authenticated:
+       My_Library= MyLibrary.objects.filter(user=request.user)
 
-    form=MyLibraryForm()
-    if request.method=="POST":
-        form=MyLibraryForm(request.POST)
+       form=MyLibraryForm()
+       if request.method=="POST":
+          form=MyLibraryForm(request.POST)
 
-        if form.is_valid():
-            form.save(commit=True)
-            return render(request,'FirstApp/MyLibrary.html',{'forms':form,'MyLibrary':My_Library,"message":"Your data has been saved"})
+          if form.is_valid():
+             form.save(commit=True)
+             return render(request,'FirstApp/MyLibrary.html',{'forms':form,'MyLibrary':My_Library,"message":"Your data has been saved"})
 
-        else:
-            print("Invalid form")
+          else:
+               print("Invalid form")
 
-    return render(request,'FirstApp/MyLibrary.html',{'forms':form,'MyLibrary':My_Library})
+       else:
+           return render(request,'FirstApp/MyLibrary.html',{'forms':form,'MyLibrary':My_Library})
+
+    else:
+        return render(request,'FirstApp/Login.html',{'message':"You need to login to view this page."})
 
 
 def Challenge2View(request):
