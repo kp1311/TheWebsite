@@ -305,21 +305,18 @@ def MyGoalView(request):
     if request.user.is_authenticated:
        My_goal= MyGoal.objects.filter(user=request.user)
 
-       form=MyGoalForm()
-
-
        if request.method=="POST":
-          form=MyGoalForm(request.POST)
+          user1=request.user
+          Subject1=request.POST.get('Subject')
+          Url1=request.POST.get('Url')
+          b1 = MyGoal(user=user1, Goal_subject=Subject1,Subject_Url=Url1)
+          b1.save()
+          return render(request,'FirstApp/MyGoal.html',{'goal':My_goal})
 
-          if form.is_valid():
-             form.save(commit=True)
-             return index(request)
 
-          else:
-              print("Invalid form")
 
        else:
-           return render(request,'FirstApp/MyGoal.html',{'forms':form,'goal':My_goal})
+           return render(request,'FirstApp/MyGoal.html',{'goal':My_goal})
 
     else:
          return render(request,'FirstApp/Login.html',{"message":"You need to login to view this page"})
@@ -331,59 +328,68 @@ def MyLibraryView(request):
     if request.user.is_authenticated:
        My_Library= MyLibrary.objects.filter(user=request.user)
 
-       form=MyLibraryForm()
+
        if request.method=="POST":
+          user1=request.user
+          Subject1=request.POST.get('Subject')
+          Author1=request.POST.get('Author')
+          Url1=request.POST.get('Url')
+          b1 = MyLibrary(user=user1, Subject=Subject1,Author=Author1,Url=Url1)
+          b1.save()
+
           form=MyLibraryForm(request.POST)
-
-          if form.is_valid():
-             form.save(commit=True)
-             return render(request,'FirstApp/MyLibrary.html',{'forms':form,'MyLibrary':My_Library,"message":"Your data has been saved"})
-
-          else:
-               print("Invalid form")
+          return render(request,'FirstApp/MyLibrary.html',{'MyLibrary':My_Library,"message":"Your data has been saved"})
 
        else:
-           return render(request,'FirstApp/MyLibrary.html',{'forms':form,'MyLibrary':My_Library})
+            return render(request,'FirstApp/MyLibrary.html',{'MyLibrary':My_Library})
+
+
 
     else:
         return render(request,'FirstApp/Login.html',{'message':"You need to login to view this page."})
 
 
 def Challenge2View(request):
-    Challenge2Status= Challenge2.objects.filter(user=request.user)
+    if request.user.is_authenticated:
+       Challenge2Status= Challenge2.objects.filter(user=request.user)
+       
+       if request.method=="POST":
+          user1=request.user
+          Title1=request.POST.get('Title')
+          Author1=request.POST.get('Author')
+          Time1=date.today()
+          b1 = Challenge2(user=user1,Book_Title=Title1,Book_Author=Author1,Time=Time1)
+          b1.save()
+          return render(request,'FirstApp/Challenge2.html',{'Challenge2Status':Challenge2Status,'message':"Your data has been saved"})
 
-    form=Challenge2Form()
-    if request.method=="POST":
-        form=Challenge2Form(request.POST)
+       else:
+        return render(request,'FirstApp/Challenge2.html',{'Challenge2Status':Challenge2Status})
 
-        if form.is_valid():
-            form.save(commit=True)
-            return render(request,'FirstApp/Challenge2.html',{'forms':form,'Challenge2Status':Challenge2Status,'message':"Your data has been saved"})
-
-        else:
-            print("Invalid form")
-
-    return render(request,'FirstApp/Challenge2.html',{'forms':form,'Challenge2Status':Challenge2Status})
+    else:
+        return render(request,'FirstApp/Login.html',{'message':"You need to login to view this page."})
 
 
 def Challenge1View(request):
-    Challenge1Status=Challenge1.objects.filter(user=request.user)
-    if request.method=='POST':
-        Challenge1Status2=Challenge1.objects.get(user=request.user)
+    if request.user.is_authenticated:
 
+       if request.method!='POST':
+          return render(request,'FirstApp/Challenge1.html',{})
 
-        time=request.POST.get('Time')
-        time2=int(time)
-        if time2<=10:
-           Challenge1Status2.Hours_spent_learning+=time2
-           Challenge1Status2.save()
-           return render(request,'FirstApp/Challenge1.html',{'Challenge1Status':Challenge1Status,'message':"Your data has been saved"})
-        else:
-            print("Time limit exceeded")
+       else:
+           Challenge1Status=Challenge1.objects.filter(user=request.user)
+           if request.method=='POST':
+              Challenge1Status2=Challenge1.objects.get(user=request.user)
+              time=request.POST.get('Time')
+              time2=int(time)
+              if time2<=10:
+                 Challenge1Status2.Hours_spent_learning+=time2
+                 Challenge1Status2.save()
+                 return render(request,'FirstApp/Challenge1.html',{'Challenge1Status':Challenge1Status,'message':"Your data has been saved"})
+              else:
+                  print("Time limit exceeded")
 
-
-
-    return render(request,'FirstApp/Challenge1.html',{'Challenge1Status':Challenge1Status})
+    else:
+        return render(request,'FirstApp/Login.html',{'message':"You must be logged in to see this page."})
 
 
 def ChallengeView(request):

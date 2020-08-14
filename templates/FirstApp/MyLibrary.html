@@ -17,7 +17,13 @@
       <form method="POST" class="form">
 
       {% csrf_token %}
-      {% bootstrap_form forms %}
+      <label for="Subject">Subject</label>
+      <input type="text" name="Subject" placeholder="Enter Subject"><br><br>
+      <label for="Author">Author</label>
+      <input type="text" name="Author" placeholder="Enter Author"><br><br>
+      <label for="Url">Url</label>
+      <input type="url" name="Url" placeholder="Enter Url"><br><br>
+
       {% buttons %}
           <button type="submit" class="btn btn-primary">Submit</button>
       {% endbuttons %}

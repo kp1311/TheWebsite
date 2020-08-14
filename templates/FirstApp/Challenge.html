@@ -11,6 +11,10 @@
     In 7 years you will become best in the world at what you do.<br>
     And consequently one of the highest income earners in your field.<br>
     <a href="{% url 'FirstApp:Challenge1' %}">Accept this challenge</a><br>
+    {%if message%}<script>
+        alert('{{ message }}');
+    </script>{%endif%}
+
     =========================================================================<br>
 <h3>A book a month challenge</h3>
    <br>In this challenge you have to read a book a month in your <u>chosen field</u> <br>
@@ -19,4 +23,7 @@
     the top 1% income earner in your chosen field.</br>
 
    <a href="{% url 'FirstApp:Challenge2' %}">Accept this challenge.</a>
+   {%if message%}<script>
+       alert('{{ message }}');
+   </script>{%endif%}
   {%endblock%}

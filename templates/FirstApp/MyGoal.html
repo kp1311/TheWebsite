@@ -53,8 +53,13 @@ The above mentioned paragraph is the secret to huge success.
 
       <form method="POST" class="form">
 
-      {% csrf_token %}
-      {% bootstrap_form forms %}
+        {% csrf_token %}
+        <label for="Subject">Subject</label>
+        <input type="text" name="Subject" placeholder="Enter Subject"><br><br>
+
+        <label for="Url">Url</label>
+        <input type="url" name="Url" placeholder="Enter Url"><br><br>
+
       {% buttons %}
           <button type="submit" class="btn btn-primary">Submit</button>
       {% endbuttons %}

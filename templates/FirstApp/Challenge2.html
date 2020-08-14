@@ -20,7 +20,10 @@
             <form method="POST" class="form">
 
             {% csrf_token %}
-            {% bootstrap_form forms %}
+            <label for="Title"></label>
+            <input type="text" name="Title" placeholder=" Resource Title">
+            <label for="Author"></label>
+            <input type="text" name="Author" placeholder="Author">
             {% buttons %}
                 <button type="submit" class="btn btn-primary">Submit</button>
             {% endbuttons %}
