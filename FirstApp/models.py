@@ -1,13 +1,23 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+FieldChoices = (
+    ('College Students','College Students'),
+    ('0-2 yrs experience', '0-2 yrs experience'),
+    ('2-5 yrs experience','2-5 yrs experience'),
+    ('5-10 yrs experience','5-10 yrs experience'),
+    ('10-15 yrs experience','10-15 yrs experience'),
+    ('15-20 yrs experience','15-20 yrs experience'),
+)
+
 # Create your models here.
 class Professional_Resources(models.Model):
     Title=models.CharField(max_length=100)
     Field=models.CharField(max_length=50)
     Author=models.CharField(max_length=50)
-    Descrpition=models.TextField()
+    Description=models.TextField()
     Url=models.URLField(max_length=264)
+    Target_Audience =models.CharField(max_length=20, choices=FieldChoices)
     Type=models.CharField(max_length=20)
     Self_Email=models.EmailField(max_length=100)
     Price=models.IntegerField()
@@ -93,15 +103,6 @@ class AddExperience(models.Model):
      def __str__(self):
          return self.AdviceforGoalAttainment
 
-class GetAJob(models.Model):
-    Field=models.CharField(max_length=40)
-    Experience=models.CharField(max_length=40)
-    Subject=models.CharField(max_length=50)
-    Source=models.CharField(max_length=50)
-    Url=models.URLField()
-
-    def __str__(self):
-        return self.Subject
 
 class CommentsandSuggestions(models.Model):
     Name=models.CharField(max_length=50)

@@ -1,13 +1,13 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
     <h1>This is a jobs Page</h1>
-    <h3>Select a field from the below dropdown list in which you want to get<br>
+    <h3>Select a field and experience level from the below dropdown list in which you want to get<br>
     a high paying job.</h3>
     <br><br>
 
     <form action="{%url 'FirstApp:GetAJobDetail'%}" >
 
-      <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <b>Field  :</b><select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         <option selected="selected" disabled>Field</option>
         <option >Backup</option>
         <option >Bank_Po</option>
@@ -23,6 +23,17 @@
         <option >Storage</option>
         <option >Wintel</option>
       </select>
+      <br><br>
+      <b>Experience Level  :</b><select name="Experience" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <option selected="selected" disabled>Experiece level</option>
+        <option >College Students</option>
+        <option >0-2 yrs experience</option>
+        <option >2-5 yrs experience</option>
+        <option >5-10 yrs experience</option>
+        <option >10-15 yrs experience</option>
+        <option >15-20 yrs experience</option>
+
+      </select><br><br>
       <input type="submit" class="btn btn-primary" value="Select">
 
 

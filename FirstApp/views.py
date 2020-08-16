@@ -1,8 +1,8 @@
 
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
-from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,GetAJobForm,CommentsandSuggestionsForm
-from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,GetAJob,CommentsandSuggestions
+from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm
+from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions
 from datetime import date
 import datetime
 # Create your views here.
@@ -352,7 +352,7 @@ def MyLibraryView(request):
 def Challenge2View(request):
     if request.user.is_authenticated:
        Challenge2Status= Challenge2.objects.filter(user=request.user)
-       
+
        if request.method=="POST":
           user1=request.user
           Title1=request.POST.get('Title')
@@ -416,6 +416,7 @@ def AdvicePathsExperienceResourcesView(request):
 
 def ThePageView(request):
     field_variable = request.GET['field']
+
     AllDetails= AddExperience.objects.filter(field=field_variable)
 
     return render(request,'FirstApp/ThePage.html',{'AllDetails':AllDetails})
@@ -426,8 +427,12 @@ def GetAJobView(request):
 
 def GetAJobDetailView(request):
     field_variable=request.GET['field_selected']
-    AllDetails= GetAJob.objects.filter(Field=field_variable)
-    return render(request,'FirstApp/GetAJobDetail.html',{'AllDetails':AllDetails,'Field':field_variable})
+    experience=request.GET['Experience']
+    print (field_variable)
+    field_variable=request.GET['field_selected']
+    experience=request.GET['Experience']
+    AllDetails= Professional_Resources.objects.filter(Field=field_variable).filter(Target_Audience=experience)
+    return render(request,'FirstApp/GetAJobDetail.html',{'AllDetails':AllDetails,'Field':field_variable,'Experience':experience})
 
 def NewPageView(request):
     return render(request,'FirstApp/NewPage.html')

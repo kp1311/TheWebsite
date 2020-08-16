@@ -1,8 +1,21 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
 <h3>Here are the list of skills and their resources which will enable you to get<br>
-a high paying job in {{Field}} field.</h3>
-    {%for o in AllDetails%}
-     {{o.Url}}
+a high paying job in <b>{{Field}}</b> field for <b>{{Experience}}</b>.</h3>
+<hr>
+<ol>
+    {%for detail in AllDetails%}
+     <li><b>Title</b>{{detail.Title}}<br>
+     <b>Author :</b>{{detail.Author}}<br>
+     <b>Description :</b>{{detail.Description}}<br>
+    <b>Link :</b><a href="{{detail.Url}}">Visit link</a><br>
+     <b>Target Audience :</b>{{detail.Target_Audience}}<br>
+     <b>Type :</b>{{detail.Type}}<br>
+     <b>Price (Indian Rupees) :</b>{{detail.Price}}</li><hr>
     {%endfor%}
+</ol>
+{%if message%}<script>
+    alert('{{ message }}');
+</script>{%endif%}
+
   {%endblock%}
