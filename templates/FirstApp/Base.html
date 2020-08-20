@@ -44,7 +44,7 @@
 
            <a href="{%url 'FirstApp:Challenge'%}">Challenges</a>  ||
             <a href="{%url 'FirstApp:AdvicePathsExperienceResources'%}">AdvicePathsExperienceResources</a>    ||
-          <br>  {%if user.is_authenticated%}
+           {%if user.is_authenticated%}
             <a href="{%url 'logout'%}">Logout</a>
             {%else%}
             <a href="{%url 'FirstApp:user_login'%}">login</a>
@@ -59,44 +59,25 @@
 
    {%block Body_Block%}
 <div >
-<div id="box1" class="box">
-<h1> Welcome to Careerboost</h1><br>
+<div class="Title">
+  Careerboost<br></div>
 
-<h2>On our website you get to know the best resources in the world on personal development,
-  <br>professional development and financial success which will enable you to live a wonderful life</h2><br><br>
+<div class="Tagline">Be Better,Do Better,Live Better.<br></div>
+<br><div class="ValueProp1" >We bring to you resources,advice,guidance to enable you to get a high paying<br>
+job or increase you income by 2x,3x,4x,5x or 10x.</div><br><br>
+<div class="ValueProp2">
+We also bring to you personal development and financial success resources which<br>
+will change your life for good forever.</div>
 </div>
-<div id="box1" class="boxpersonal">
+<br><br><br>
+<a href="{% url 'FirstApp:Personal_Development' %}" class="button"> Personal Development</a>
 
-  <h1>Personal development</h1>
-<h3>In personal development you will receive info on family life,physical health,<br>
-mental health,career advice, and financial independence,this information alone<br>
- has the potential to change your life for good forever.</h3>
-   <h3> <a href="{% url 'FirstApp:Personal_Development' %}">Visit Personal Development Page</a><h3><br>
-   </div>
-<div id="box1" class="boxprofessional">
+<a href="{% url 'FirstApp:Professional_Development' %}" class="button">Professional Development </a>
+<a href="{% url 'FirstApp:Professional_Development' %}" class="button">Financial Success</a>
 
-<h1>Professional Development</h1>
- <h3>In Professional Development you will learn what the best learnt to be<br>
-   the best in their field,so that you could become the best at what you do as well.<br>
-   This section will enable you to geta high paying job in any area of endevour<br>
-   as well as get resources that will enable you to increase your income by <br>
-  2x,3x,4x,5x and 10x.</h3>
-<h3>  <a href="{% url 'FirstApp:Professional_Development' %}">Visit Professional Development Page </a></h3><br>
-</div>
-<div id="box1" class="boxfinancial">
 
-  <h1>Financial success</h1>
-  <h3>Earning a high income doesnot equals being financially rich,fianacial success<br>
-  is not about not about what you earn but about what you keep,In this section <br>
-  you will get the best information in the world on topic of financial succeess<br>
-  which wil enable you to be fianacially rich and let your money earn money.
-</h3>
-<h3> <a href="{% url 'FirstApp:Financial_Success' %}">Fianacial Success Page </a></h3><br><br>
-</div>
-<div id="box1" class="boxpersonal">
-<h1>Have a wonderful life now</h1>
-</div>
 {%endblock%}
+
 
 <br>
 <br>

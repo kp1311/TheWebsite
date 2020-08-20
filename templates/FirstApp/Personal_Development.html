@@ -2,17 +2,48 @@
 {% extends "FirstApp/Base.html"%}
 
 {%block Body_Block%}
-<h1>Welcome to personal developmemt page</h1>
+<div class="personaldevelopment"><h1>Welcome to personal developmemt page</h1>
 <h3>This page contains a list of best personal development coaches in the world.<br>
   They provide life transforming information,which could change<br> your<br>
  family life,physical health,carrer, financial life and Personal life for good forever.</h3>
-<br><br><br>
+<br><br><br></div>
 
-<table>
-<tr><td><a href="{% url 'FirstApp:Brian_Tracy' %}">Brian Tracy</a></td> <td> <a href="{% url 'FirstApp:Earl_Nightingale' %}">Earl Earl Nightingale</a></td> <td> <a href="{% url 'FirstApp:Jack_Canfield' %}">Jack Canfield</a></td> <td> <a href="{% url 'FirstApp:Jim_Rohn' %}">Jim Rohn</a></td></tr>
-<tr><td> <a href="{% url 'FirstApp:Napolean_Hill' %}">Napolean Hill</a></td> <td> <a href="{% url 'FirstApp:Robin_Sharma' %}">Robin Sharma</a></td> <td> <a href="{% url 'FirstApp:Shiv_Khera' %}">Shiv Khera</a></td> <td> <a href="{% url 'FirstApp:Steven_R_Covey' %}">Steven R. Covey</a></td></tr>
-<tr><td> <a href="{% url 'FirstApp:Napolean_Hill' %}">Tony Robbins</a></td> <td> <a href="{% url 'FirstApp:Wayne_Dyer' %}">Wayne Dyer</a></td><td> <a href="{% url 'FirstApp:Zig_Ziglar' %}">Zig Ziglar</a></td>  <td> </td></tr>
 
-</table>
+<div class="row">
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Brian_Tracy' %}">Brian Tracy</a></td> <td></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Earl_Nightingale' %}">Earl Earl Nightingale</a></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Jack_Canfield' %}">Jack Canfield</a></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Jim_Rohn' %}">Jim Rohn</a></div>
+  </div>
+  <div class="column">
+    <div class="card"> <a href="{% url 'FirstApp:Napolean_Hill' %}">Napolean Hill</a></div>
+  </div>
+<div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Robin_Sharma' %}">Robin Sharma</a></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Shiv_Khera' %}">Shiv Khera</a></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Steven_R_Covey' %}">Steven R. Covey</a></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Napolean_Hill' %}">Tony Robbins</a></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Wayne_Dyer' %}">Wayne Dyer</a></div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="{% url 'FirstApp:Zig_Ziglar' %}">Zig Ziglar</a></div>
 
+
+</div>
+</div>
 {%endblock%}
