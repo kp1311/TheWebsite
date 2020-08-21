@@ -5,19 +5,6 @@ body {
     height: 100%;
 }
 
-td{
-height:100px;
-width:250px;
-}
-
-
-
-table, th, td {
-  border: 1px solid black;
-  margin: 0 auto;
-  text-align:center;
-
-}
 body {
     text-align: center;
 
@@ -29,6 +16,7 @@ form {
 /* unvisited link */
 a:link {
   color: white;
+
 }
 
 /* visited link */
@@ -36,9 +24,18 @@ a:visited {
   color: #07F5E3  ;
 }
 
+.card7 : a:link,a:visited {
+  color:red;
+  background-color: red;
+  }
+
 /* selected link */
-a:active {
-  color: white;
+a:hover {
+  color: hotpink;
+  background-color: lightgreen;
+}
+a:active{
+  color:red;
 }
 body, html {
   height: 100%;
@@ -54,10 +51,25 @@ body, html {
 
 
 
-#box1 {
+#box1{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.registration ,.FinancialResources,.PersonalDevelopmentResources,.Experience,.AddResources{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:  rgba(239, 243, 249  ,0.90);
+    width:auto;
+    height:auto;
+}
+
+.newpage {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:  rgba(239, 243, 249  ,0.75);
+    width:auto;
+    height:100%;
+    padding-top: 10px;
+    padding-bottom:5px;
+}
 
 .boxheading {
 box-shadow: 5px 10px 8px #888888;
@@ -136,7 +148,8 @@ color:white;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row {margin: 0 -5px;
+color:white;}
 
 /* Clear floats after the columns */
 .row:after {
@@ -169,6 +182,52 @@ color:white;
   background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(7, 100, 187  ,1));
 }
 
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: auto;
+
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(152, 255, 152 ,1));
+}
+.card4 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: auto;
+
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,255,0,1));
+}
+.card5 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: auto;
+
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,255,0,1));
+}
+
+.card6 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: auto;
+
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,255,0,1));
+}
+
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {
@@ -183,5 +242,42 @@ color:white;
 }
 
 .professionaldevelopment{
+color:white;
+}
+
+.card7 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: auto;
+
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(11, 83, 140,1));
+}
+.card8 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: auto;
+
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,255,0,1));
+}
+.card9 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: auto;
+
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+.white{
 color:white;
 }

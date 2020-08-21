@@ -2,7 +2,7 @@
 
 {%block Body_Block%}
 {% load bootstrap3 %}
-
+<div class="white">
 <h1>This is the ultimate thing,<br>GOALS</h1>
  Goal play such an important role in success that we have devted a seperate <br>
  page to it.This is one of the most important page on this website.<br>
@@ -43,14 +43,16 @@ The above mentioned paragraph is the secret to huge success.
 <br><br><br>
 
     <H1>Here is your goal.</h1>
-
+    <div class="row">
       <ol>
       {%for g in goal%}
+      <div class="column">
+        <div class="card5">
       <li><b>Subject skill :</b >{{g.Goal_subject}}<br>
-      <b>Url :</b>{{g.Subject_Url}}</li>
+      <b>Url :</b><a href="{{g.Subject_Url}}">Go to link</a></li></div></div>
       {%endfor%}
- </ol>
-
+ </ol></div>
+<br><br>
       <form method="POST" class="form">
 
         {% csrf_token %}
@@ -63,7 +65,7 @@ The above mentioned paragraph is the secret to huge success.
       {% buttons %}
           <button type="submit" class="btn btn-primary">Submit</button>
       {% endbuttons %}
-  </form>
+  </form></div>
   {%if message%}<script>
       alert('{{ message }}');
   </script>{%endif%}

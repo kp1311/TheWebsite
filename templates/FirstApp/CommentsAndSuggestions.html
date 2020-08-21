@@ -1,6 +1,7 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
 {% load bootstrap3 %}
+<div class="registration">
    <h1>Thank you for giving us an opprtunity to serve you, it means a lot to us.</h1>
    <h3>Please tell us about your experience with us,tell us about what you liked
      <br>and what you want us to do so that we could serve you even better next
@@ -17,7 +18,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     {% endbuttons %}
 </form>
-
+</div>
 {%if message%}<script>
     alert('{{ message }}');
 </script>{%endif%}

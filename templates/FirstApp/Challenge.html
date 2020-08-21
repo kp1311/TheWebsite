@@ -1,7 +1,7 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
 {% load bootstrap3 %}
-    <h2>There are two challenges for you.</h2>
+<div class="white">    <h2>There are two challenges for you.</h2>
 
    <h3>Hours challenge</h3>
    <br>
@@ -23,7 +23,7 @@
     the top 1% income earner in your chosen field.</br>
 
    <a href="{% url 'FirstApp:Challenge2' %}">Accept this challenge.</a>
-   {%if message%}<script>
+</div>   {%if message%}<script>
        alert('{{ message }}');
    </script>{%endif%}
   {%endblock%}

@@ -1,6 +1,7 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
 {% load bootstrap3 %}
+<div class="white"><br><br>
 <p>Benefit you receive by accomplishing this challenge</p>
 
     In this challenge you have to study an hour a day for your chosen field.<br>
@@ -22,10 +23,10 @@
         {%csrf_token%}
         <label for="hours">Hours spent learning today</label>
         <input type="number" name="Time" placeholder="Enter Time">
-        <input type="Submit" value="Login">
+        <input type="Submit" value="Login" class="btn-primary">
       </form>
 
-
+</div>
       {%if message%}<script>
           alert('{{ message }}');
       </script>{%endif%}

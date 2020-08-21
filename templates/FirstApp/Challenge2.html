@@ -1,21 +1,23 @@
 {% extends "FirstApp/Base.html"%}
 {% load bootstrap3 %}
-{%block Body_Block%}
-    <p>You have to read a book a month in your chosen field. </p>
+{%block Body_Block%}<br><br>
+  <div class="white">  <p>You have to read a book a month in your chosen field. </p>
           <p>Benefit you receive By accompishing this challenge
             By reading a book a month you will enter the top 1% of
             <br>income earners in your field </p>
 
           <h3>  Your status:</h3><br>
-
+<div class="row">
 <ol>
              {%for status in Challenge2Status%}
+             <div class="column">
+               <div class="card2">
             <li>  <b>Time :</b>{{status.Time}}<br>
               <b>Book Title :</b>{{status.Book_Title}}<br>
               <b>Book Author :</b>{{status.Book_Author}}</li>
-             <br><br>
+            </div></div>
              {%endfor%}
-</ol><br><br><br>
+</ol><br><br><br></div>
           <b>  Enter the details of book you read this month</b><br><br>
             <form method="POST" class="form">
 
@@ -28,7 +30,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             {% endbuttons %}
         </form>
-
+</div>
         {%if message%}<script>
             alert('{{ message }}');
         </script>{%endif%}

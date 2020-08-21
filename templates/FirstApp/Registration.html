@@ -1,12 +1,13 @@
 {% extends "FirstApp/Base.html"%}
 {% load bootstrap3 %}
 {%block Body_Block%}
-    <h1>Welome to regisrtation page</h1>
+    <br><div class="registration"><h1>Welome to regisrtation page</h1>
     <h3>Register here to gain access to all the features of the website</h3>
 
     <br><br>
     <h4>Registration form</h4>
-    <br><br>
+    <br><br></div>
+<div class="registration">
     <form method="POST" class="form">
 
     {% csrf_token %}
@@ -15,6 +16,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     {% endbuttons %}
 </form>
+</div>
   </form>
   {%if message%}<script>
       alert('{{ message }}');

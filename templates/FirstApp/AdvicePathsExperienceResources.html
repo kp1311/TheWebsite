@@ -1,6 +1,7 @@
 {%extends "FirstApp/Base.html"%}
-{%block Body_Block%}
-<a href="{%url 'FirstApp:AddExperience'%}">Add your experience </a><br>
+{%block Body_Block%}<br><br>
+<div class="white">
+<a href="{%url 'FirstApp:AddExperience'%}">Add your experience </a><br><br>
 Here we provide you advice and guidance form the people who are the best at what they do<br>
 <br>From the below Dropdown menu select the field for which you wnat the advice and guidance</br>
 <br>
@@ -17,7 +18,7 @@ Here we provide you advice and guidance form the people who are the best at what
     <option >Linux</option>
     <option >Medical</option>
     <option >Networking</option>
-    <option >SoftwareDevelopmen</option>
+    <option >SoftwareDevelopment</option>
     <option >SSC_CGL</option>
     <option >Storage</option>
     <option >Wintel</option>
@@ -27,5 +28,5 @@ Here we provide you advice and guidance form the people who are the best at what
 
 
 </form>
-
+</div>
   {%endblock%}

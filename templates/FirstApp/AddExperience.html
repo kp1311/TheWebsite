@@ -2,8 +2,10 @@
 {% extends "FirstApp/Base.html"%}
 {% load bootstrap3 %}
 
-    Add your experience here.
+
 {%block Body_Block%}
+Add your experience here.
+<div class="Experience">
 <form method="POST" class="form">
 
 {% csrf_token %}
@@ -11,7 +13,7 @@
 {% buttons %}
     <button type="submit" class="btn btn-primary">Submit</button>
 {% endbuttons %}
-</form>
+</form></div>
 
 {%if message%}<script>
     alert('{{ message }}');

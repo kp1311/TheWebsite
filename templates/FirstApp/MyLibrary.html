@@ -1,16 +1,28 @@
 {% extends "FirstApp/Base.html"%}
 {% load bootstrap3 %}
-{%block Body_Block%}
-    <H1>This is your Library.</h1>
+{%block Body_Block%}<br><br>
+  <div class="white">  <H1>This is your Library.</h1>
       <h4>Build a virtual library with most important resources in your field.</h4>
       <ol>
+    <div class="row">
       {%for resource in MyLibrary%}
+      {%if resource.Price != 0 %}
+      <div class="column">
+        <div class="card5">
       <li><b>Subject :</b>{{resource.Subject}}<br>
       <b>Author :</b>{{resource.Author}}<br>
-       <b>Url :</b>{{resource.Url}}<br></li>
+      <b>Price :</b>{{resource.Price}}<br>
+       <b>Url :</b><a href="{{resource.Url}}">Go to link</a><br></li></div></div>
+       <div class="column">
+         <div class="card4">
+       <li><b>Subject :</b>{{resource.Subject}}<br>
+       <b>Author :</b>{{resource.Author}}<br>
+       <b>Price :</b>{{resource.Price}}<br>
+        <b>Url :</b><a href="{{resource.Url}}">Go to link</a><br></li></div></div>
+       {%endif%}
       {%endfor%}
     </ol>
-
+</div>
 <br><br><br>
 
 <h3>Enter a resource into your library.</h3>
@@ -27,7 +39,7 @@
       {% buttons %}
           <button type="submit" class="btn btn-primary">Submit</button>
       {% endbuttons %}
-  </form>
+  </form></div>
   {%if message%}<script>
       alert('{{ message }}');
   </script>{%endif%}

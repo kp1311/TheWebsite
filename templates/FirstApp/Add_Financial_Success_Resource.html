@@ -2,6 +2,7 @@
 
 {%block Body_Block%}
 {% load bootstrap3 %}
+<div class="FinancialResources">
 <form method="POST" class="form">
 
 {% csrf_token %}
@@ -9,7 +10,7 @@
 {% buttons %}
     <button type="submit" class="btn btn-primary">Submit</button>
 {% endbuttons %}
-</form>
+</form></div>
 {%if message%}<script>
     alert('{{ message }}');
 </script>{%endif%}

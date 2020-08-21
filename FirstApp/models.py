@@ -65,6 +65,7 @@ class MyLibrary(models.Model):
     Subject=models.CharField(max_length=50)
     Author=models.CharField(max_length=50)
     Url=models.URLField()
+    Price=models.IntegerField()
 
     def __str__(self):
         return self.Goal_Url

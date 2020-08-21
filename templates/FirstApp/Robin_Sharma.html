@@ -1,13 +1,29 @@
-{% extends "FirstApp/Base.html"%}
-{%block Body_Block%}
-    Know a good Personal Development Resource that you can't find on the website,Add it to the website.
-   <a href="{% url 'FirstApp:Add_Personal_Development_Resource' %}">Add a resource</a>
-   <ol>
-      {%for resource in Resource %}
-      <li><b>Name :</b>{{resource.Name_Of_Resource}}</li><br>
-      <b>Url :</b>{{resource.Url}}<br>
-       <b>Type :</b>{{resource.Type}}<br>
-       <b>Price</b>{{resource.Price}}<br><br>
-      {%endfor%}
-   </ol>
-  {%endblock%}
+{%extends "FirstApp/Base.html"%}
+
+
+{%block Body_Block%}<br><br>
+  <div class="white">  Know a good Personal Development Resource that you can't find on the website,Add it to the website.</div>
+  <br><br><a href="{% url 'FirstApp:Add_Personal_Development_Resource' %}">Add a resource</a>
+<br><br>
+<div class="row">
+<ol>
+   {%for resource in Resource %}
+   {%if resource.Price != 0 %}
+  <div class="column">
+    <div class="card5">
+   <li><b>Name :</b>{{resource.Name_Of_Resource}}</li><br>
+   <b>Url :<a href="{{resource.Url}}"></b>Go to link</a><br>
+    <b>Type :</b>{{resource.Type}}<br>
+    <b>Price</b>{{resource.Price}}</div></div>
+    {%else%}
+    <div class="column">
+      <div class="card7">
+     <li><b>Name :</b>{{resource.Name_Of_Resource}}</li><br>
+     <b>Url :<a href="{{resource.Url}}"></b>Go to link</a><br>
+      <b>Type :</b>{{resource.Type}}<br>
+      <b>Price</b>{{resource.Price}}<br></div></div>
+      {%endif%}
+   {%endfor%}
+ </div>
+</ol>
+{%endblock%}
