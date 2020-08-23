@@ -1,14 +1,14 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
-    <div class="white"><form action="{%url 'FirstApp:user_login'%}" method='POST'>
+    <form action="{%url 'FirstApp:user_login'%}" method='POST'>
       {%csrf_token%}<br><br>
-      <label for="username">Username</label>
-      <input type="text" name="username" placeholder="Enter Username"><br><br
-      <label for="password">Password</label>
+      <label for="username"><div class="white">Username</div></label>
+      <input type="text" name="username" placeholder="Enter Username"><br><br>
+      <label for="password"><div class="white">Password</div></label>
       <input type="Password" name="password" placeholder="Enter Password"><br><br>
       <input type="Submit" value="Login" class="btn-primary">
     </form>
-</div>
+
     {%if message%}<script>
         alert('{{ message }}');
     </script>{%endif%}

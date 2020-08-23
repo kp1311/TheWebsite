@@ -12,16 +12,16 @@
   <div class="column">
     <div class="card5">
    <li><b>Name :</b>{{resource.Name_Of_Resource}}</li><br>
-   <b>Url :<a href="{{resource.Url}}"></b>Go to link</a><br>
+   <b>Url :<a href="{{resource.Url}}" class="button2">Go to link</a><br>
     <b>Type :</b>{{resource.Type}}<br>
-    <b>Price</b>{{resource.Price}}</div></div>
+    <b>Price Indian Rupees :</b>{{resource.Price}}</div></div>
     {%else%}
     <div class="column">
       <div class="card7">
      <li><b>Name :</b>{{resource.Name_Of_Resource}}</li><br>
-     <b>Url :<a href="{{resource.Url}}"></b>Go to link</a><br>
+     <b>Url :<a href="{{resource.Url}}" class="button2">Go to link</a><br>
       <b>Type :</b>{{resource.Type}}<br>
-      <b>Price</b>{{resource.Price}}<br></div></div>
+      <b>Price Indian Rupees :</b>{{resource.Price}}<br></div></div>
       {%endif%}
    {%endfor%}
  </div>
