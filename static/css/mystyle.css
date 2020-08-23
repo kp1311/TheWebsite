@@ -120,7 +120,21 @@ font-size:20px;
 .Title{
   font-size:100px;
 color:white;
+ font-size:8vw;
+}
 
+.button2 {
+   border: 2px solid white;
+  background-color: #2F2DEA;
+
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size:15px;
+  border-radius: 12px;
 }
 
 .button {
@@ -128,7 +142,7 @@ color:white;
   background-color: #2F2DEA;
 
   color: white;
-  padding: 5px 15px;
+  padding: 2px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -141,6 +155,12 @@ color:white;
   color: white;
 
 }
+.button2:hover {
+  background-color: #F58908  ;
+  color: white;
+
+}
+
 
 .column {
   float: left;

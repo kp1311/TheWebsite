@@ -1,36 +1,44 @@
+
 {% extends "FirstApp/Base.html"%}
-{%block Body_Block%}<div class="white">
-<h3>Here are the list of skills and their resources which will enable you to get<br>
-a high paying job in <b>{{Field}}</b> field for <b>{{Experience}}</b>.</h3>
-<hr>
+{%block Body_Block%}<br><br>
+<div class="white">Know about a good resource that you dont find on our website,<br>
+    Add it to the Website.<br><br></div>
+
+  <div class="orange"><a href="{% url 'FirstApp:AddResource' %}">Add a resource</a><br><br></div>
 <div class="row">
-<ol>
+  <ol>
+
     {%for detail in AllDetails%}
     {%if detail.Price != 0 %}
-    <div class="column">
-      <div class="card4">
-     <li><b>Title</b>{{detail.Title}}<br>
-     <b>Author :</b>{{detail.Author}}<br>
-     <b>Description :</b>{{detail.Description}}<br>
-    <b>Link :</b><a href="{{detail.Url}}">Visit link</a><br>
-     <b>Target Audience :</b>{{detail.Target_Audience}}<br>
-     <b>Type :</b>{{detail.Type}}<br>
-     <b>Price (Indian Rupees) :</b>{{detail.Price}}</li></div></div>
-     {%else%}
-     <div class="column">
-       <div class="card3">
-      <li><b>Title</b>{{detail.Title}}<br>
-      <b>Author :</b>{{detail.Author}}<br>
-      <b>Description :</b>{{detail.Description}}<br>
-     <b>Link :</b><a href="{{detail.Url}}">Visit link</a><br>
+        <div class="column">
+        <div class="card4"><li><b>Title :{{resource.Title}}</b></li>
+        <b>Author :</b>{{detail.Author}}<br>
+        <b>Description :</b>{{detail.Description}}<br>
+      <b>Url to resource :</b><a href="{{detail.Url}}" class="button2">Go to link</a><br>
       <b>Target Audience :</b>{{detail.Target_Audience}}<br>
-      <b>Type :</b>{{detail.Type}}<br>
-      <b>Price (Indian Rupees) :</b>{{detail.Price}}</li></div></div>{%endif%}
+      <b>Type :</b>  {{detail.Type}}<br>
+        <b>Cost</b>Indian Rupees : {{detail.Price}}<br></div>
+      </div>
+      {%else%}
+
+              <div class="column">
+              <div class="card3"><li><b>Title :{{detail.Title}}</b></li>
+              <b>Author :</b>{{detail.Author}}<br>
+              <b>Description :</b>{{detail.Description}}<br>
+            <b>Url to resource :</b><a href="{{detail.Url}}" class="button2">Go to link</a><br>
+            <b>Type :</b>  {{detail.Type}}<br>
+            <b>Target Audience :</b>{{detail.Target_Audience}}<br>
+              <b>Cost</b>Indian Rupees : {{detail.Price}}<br></div>
+            </div>
+{%endif%}
+
+
+
     {%endfor%}
 
-</ol></div>
-{%if message%}<script>
-    alert('{{ message }}');
-</script>{%endif%}
+  </ol>
+</div>
+  <br><br>
+
 
   {%endblock%}
