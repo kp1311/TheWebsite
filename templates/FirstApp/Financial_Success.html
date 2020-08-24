@@ -6,7 +6,7 @@
 <div class="white">   Know about a good resource that you dont find on our website,<br>
    Add it to the Website.<br></div>
 <br>
- <a href="{% url 'FirstApp:Add_Financial_Success_Resource' %}">Add a resource</a>
+ <a href="{% url 'FirstApp:Add_Financial_Success_Resource' %}"class="button2">Add a resource</a>
 <br><br>
 <div class="row">
  <ol>
@@ -17,8 +17,8 @@
   <div class="card8">
    <li><b>Title :{{resource.Name_Of_Resource}}</b></li>
    <b>Author :</b>{{resource.Author}}<br>
-   <b>Description :</b>{{resource.Descrpition}}<br>
- <b><b>Url :<a href="{{resource.Url}}"></b>Go to link</a><br>
+
+ <b>Url :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
  <b>Type :</b>  {{resource.Type}}<br>
    <b>Cost</b>Indian Ruppess : {{resource.Price}}<br>
 </div></div>
@@ -28,7 +28,7 @@
    <li><b>Title :{{resource.Name_Of_Resource}}</b></li>
    <b>Author :</b>{{resource.Author}}<br>
 
- <b>Url :<a href="{{resource.Url}}" class="button2"></b>Go to link</a><br>
+ <b>Url :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
  <b>Type :</b>  {{resource.Type}}<br>
    <b>Cost</b>Indian Ruppess : {{resource.Price}}<br>
 </div></div>

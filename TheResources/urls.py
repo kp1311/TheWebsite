@@ -22,7 +22,8 @@ urlpatterns = [
     url(r'^$',views.index,name='index'),
     path('admin/', admin.site.urls),
     url(r'^FirstApp/',include('FirstApp.url')),
-
+    url(r'^detail12345/$',views.detail12345,name='detail12345'),
+    url(r'^DetailPersonalDevelopment/$',views.DetailPersonalDevelopmentView,name='DetailPersonalDevelopment'),
     url(r'^logout/$',views.user_logout,name='logout'),
 
 

@@ -15,6 +15,12 @@ from .forms import RegisterForm
 from django.contrib import messages
 
 
+def detail12345(request):
+    field1 = request.GET.get('field')
+    resource=Professional_Resources.objects.filter(Field=field1).order_by('Title')
+
+    return  render(request, "FirstApp/detail12345.html",{'Resource':resource} )
+
 # Create your views here.
 def RegistrationView(response):
     if response.method == "POST":
@@ -37,115 +43,6 @@ def index(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
-#This view is for Software Development page
-def SoftwareDevelopmentView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Software development").order_by('Title')
-
-
-    return render(request,'FirstApp/Software_Development.html',{'Resource':ResourceList})
-
-#This view is for Backup page
-def BackupView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Backup")
-
-
-    return render(request,'FirstApp/Backup.html',{'Resource':ResourceList})
-
-#This view is for Bank_View page
-def Bank_PoView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Bank Po")
-
-
-    return render(request,'FirstApp/Bank_Po.html',{'Resource':ResourceList})
-
-#This view is for Business page
-def BusinessView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Business")
-
-
-    return render(request,'FirstApp/Business.html',{'Resource':ResourceList})
-
-#This view is for CAT page
-def CATView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="CAT")
-
-
-    return render(request,'FirstApp/CAT.html',{'Resource':ResourceList})
-
-#This view is for Database page
-def DatabaseView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Database")
-
-
-    return render(request,'FirstApp/Database.html',{'Resource':ResourceList})
-
-#This view is for GMAT page
-def GMATView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="GMAT")
-
-
-    return render(request,'FirstApp/GMAT.html',{'Resource':ResourceList})
-
-#This view is for IAS page
-def IASView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="IAS")
-    return render(request,'FirstApp/IAS.html',{'Resource':ResourceList})
-
-
-#This view is for Linux page
-def LinuxView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Linux")
-
-
-    return render(request,'FirstApp/Linux.html',{'Resource':ResourceList})
-
-#This view is for Medical page
-def MedicalView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Medical")
-
-
-    return render(request,'FirstApp/Medical.html',{'Resource':ResourceList})
-
-#This view is for Networking page
-def NetworkingView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Networking")
-
-
-    return render(request,'FirstApp/Networking.html',{'Resource':ResourceList})
-
-#This view is for SSC_CGL page
-def SSC_CGLView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="SSC CGL")
-
-
-    return render(request,'FirstApp/SSC_CGL.html',{'Resource':ResourceList})
-
-#This view is for Storage page
-def StorageView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Storage")
-
-
-    return render(request,'FirstApp/Storage.html',{'Resource':ResourceList})
-
-#This view is for Swimming page
-def SwimmingView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Swimming")
-
-
-    return render(request,'FirstApp/Swimming.html',{'Resource':ResourceList})
-
-#This view is for Wintel page
-def WintelView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Wintel")
-
-
-    return render(request,'FirstApp/Wintel.html',{'Resource':ResourceList})
-
-def LawView(request):
-    ResourceList=Professional_Resources.objects.filter(Field="Law")
-
-
-    return render(request,'FirstApp/Law.html',{'Resource':ResourceList})
 
 
 #This view is for Personal Development page
@@ -154,7 +51,14 @@ def Personal_Development(request):
 
 #This view is for Professional Development page
 def Professional_Development(request):
+
     return render(request,'FirstApp/Professional_Development.html')
+
+def DetailPersonalDevelopmentView(request):
+    field1 = request.GET.get('author')
+    print(field1)
+    resource=Personal_Development_Resources.objects.filter(Author=field1).order_by('Name_Of_Resource')
+    return render(request,'FirstApp/DetailPersonalDevelopment.html',{'Resource':resource})
 
 #This view is for Financial Success page
 def Financial_Success(request):
