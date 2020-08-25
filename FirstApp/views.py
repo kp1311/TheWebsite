@@ -29,11 +29,6 @@ def RegistrationView(response):
 	              form.save()
 
 	              return render(response, "FirstApp/Registration.html", {"forms":form,"message":"You have been registered"})
-    else:
-	     form = RegisterForm()
-
-    return render(response, "FirstApp/Registration.html", {"forms":form})
-
 def index(request):
 
     my_dict={'insert':"hello world"}
@@ -79,78 +74,6 @@ def AddResourceView(request):
 
 
     return render(request,'FirstApp/AddResource.html',{'forms':form})
-
-def BrianTracyView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Brian Tracy")
-
-
-    return render(request,'FirstApp/Brian_Tracy.html',{'Resource':ResourceList})
-
-def DeepakChopraView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Deepak Chopra")
-
-
-    return render(request,'FirstApp/Deepak_Chopra.html',{'Resource':ResourceList})
-
-def EarlNightingaleView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Earl Nightingale")
-
-
-    return render(request,'FirstApp/Earl_Nightingale.html',{'Resource':ResourceList})
-
-def JackCanfieldView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Jack Canfield")
-
-
-    return render(request,'FirstApp/Jack_Canfield.html',{'Resource':ResourceList})
-
-def JimRohnView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Jim Rohn")
-
-
-    return render(request,'FirstApp/Jim_Rohn.html',{'Resource':ResourceList})
-
-def NapoleanHillView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Napolean Hill")
-
-
-    return render(request,'FirstApp/Napolean_Hill.html',{'Resource':ResourceList})
-
-def RobinSharmaView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Robin Sharma")
-
-
-    return render(request,'FirstApp/Robin_Sharma.html',{'Resource':ResourceList})
-
-def ShivKheraView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Shiv Khera")
-
-
-    return render(request,'FirstApp/Shiv_Khera.html',{'Resource':ResourceList})
-
-def StevenRCoveyView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Steven R Covey")
-
-
-    return render(request,'FirstApp/Steven_R_Covey.html',{'Resource':ResourceList})
-
-def TonyRobbinsView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Tony Robbins")
-
-
-    return render(request,'FirstApp/Tony_Robbins.html',{'Resource':ResourceList})
-
-def WayneDyerView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Wayne Dyer")
-
-
-    return render(request,'FirstApp/Wayne_Dyer.html',{'Resource':ResourceList})
-
-def ZigZiglarView(request):
-    ResourceList=Personal_Development_Resources.objects.filter(Author="Zig Ziglar")
-
-
-    return render(request,'FirstApp/Zig_Ziglar.html',{'Resource':ResourceList})
 
 
 def AddPersonalDevelopmentResourceView(request):
@@ -304,11 +227,12 @@ def AddExperienceView(request):
     form=AddExperienceForm()
 
     if request.method=='POST':
-        form=AddExperience(request.POST)
+        form=AddExperienceForm(request.POST)
 
         if form.is_valid():
-            form.save()
-            return render(request,'FirstApp/AddExperience.html',{'forms':form,'message':"Your information has been saved"})
+           form.save(commit=True)
+           form=AddExperienceForm(request.POST)
+           return render(request,'FirstApp/AddExperience.html',{'forms':form,'message':"Your information has been saved"})
 
 
     return render(request,'FirstApp/AddExperience.html',{'forms':form})
@@ -320,7 +244,6 @@ def AdvicePathsExperienceResourcesView(request):
 
 def ThePageView(request):
     field_variable = request.GET['field']
-
     AllDetails= AddExperience.objects.filter(field=field_variable)
 
     return render(request,'FirstApp/ThePage.html',{'AllDetails':AllDetails})

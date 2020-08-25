@@ -95,7 +95,7 @@ class AddExperience(models.Model):
      Role=models.CharField(max_length=50)
      Company=models.CharField(max_length=50)
      field=models.CharField(max_length=50)
-     Target_Section=models.CharField(max_length=25)
+     Target_Section=models.CharField(max_length=25,choices=FieldChoices)
      AdviceforGoalAttainment=models.TextField()
      SelfExperience=models.TextField()
      Paths=models.TextField()
