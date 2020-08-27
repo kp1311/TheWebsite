@@ -5,6 +5,12 @@
 
 <div class="orange">  <a href="{% url 'FirstApp:AddResource' %}" class="button2">Add a resource</a><br><br></div>
 <div class="row">
+<br><br>
+
+<b>Want excellent advice and guidance in {{field1}} field which would give you an edge<br>
+ visit our Advice and experience page at</b> <br><br>
+<a href="{% url 'FirstApp:AdvicePathsExperienceResources' %}" class="button2">Visit the page</a>
+<br><br><br>
   <ol>
 
     {%for resource in Resource%}

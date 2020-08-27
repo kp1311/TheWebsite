@@ -326,3 +326,26 @@ li a {
 li a:hover {
   background-color:lightgreen;
 }
+.column2 {
+  float: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.card10 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 80%;
+  height: auto;
+  font-size: 16px;
+ border: 2px solid white;
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(11, 83, 140,1));
+}
+
+.center{
+
+  margin: auto;
+}

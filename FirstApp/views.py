@@ -1,4 +1,3 @@
-
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm
@@ -19,7 +18,7 @@ def detail12345(request):
     field1 = request.GET.get('field')
     resource=Professional_Resources.objects.filter(Field=field1).order_by('Title')
 
-    return  render(request, "FirstApp/detail12345.html",{'Resource':resource} )
+    return  render(request, "FirstApp/detail12345.html",{'Resource':resource,'field1':field1} )
 
 # Create your views here.
 def RegistrationView(response):
@@ -29,6 +28,7 @@ def RegistrationView(response):
 	              form.save()
 
 	              return render(response, "FirstApp/Registration.html", {"forms":form,"message":"You have been registered"})
+
 def index(request):
 
     my_dict={'insert':"hello world"}
@@ -246,7 +246,7 @@ def ThePageView(request):
     field_variable = request.GET['field']
     AllDetails= AddExperience.objects.filter(field=field_variable)
 
-    return render(request,'FirstApp/ThePage.html',{'AllDetails':AllDetails})
+    return render(request,'FirstApp/ThePage.html',{'AllDetails':AllDetails,'field1':field_variable})
 
 def GetAJobView(request):
     return render(request,'FirstApp/GetAJob.html')
