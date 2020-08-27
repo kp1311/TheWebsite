@@ -22,13 +22,14 @@ def detail12345(request):
 
 # Create your views here.
 def RegistrationView(response):
+    form = RegisterForm()
     if response.method == "POST":
 	       form = RegisterForm(response.POST)
 	       if form.is_valid():
 	              form.save()
 
 	              return render(response, "FirstApp/Registration.html", {"forms":form,"message":"You have been registered"})
-
+    return render(response, "FirstApp/Registration.html", {"forms":form})
 def index(request):
 
     my_dict={'insert':"hello world"}
