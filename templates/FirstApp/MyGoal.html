@@ -9,25 +9,30 @@
  <h4>Do this one thing and it will change your life forever.</h4>
 <br>
  A person with a goal accomplishes vastly more than a person who does not set goal<br>
- Here is a life changing video to on goals.<br>
- <a href="https://www.youtube.com/watch?v=XktHAwYK1Xw">Go to video</a>
+ Here is a life changing video to on goals.<br><br>
+ <a href="https://www.youtube.com/watch?v=XktHAwYK1Xw" class="button">Go to video</a>
 <br><br><br>
 <p>
   <hr>
-<h4>  The goals checklist:(on this site we are primarily focused on career goals right now.)</h4<br>
-  <ol>
-    <li>I have a clear ,specific goal.</li>
-  <li>I have set a deadline to achieve that goal.</li>
-  <li>I found out the specialized knowledge and skills that  I need to achieve the goal.</li>
-  <li>I have listed all the things i need to do or practice in order to achieve the goal.</li>
-  <li>I have oraganized the list into a sequence of steps that I need to take in order<br>
-       to achieve my goal.
-  <li>I know which 20% of the things will produce 80% of the result.<li>
-  <li>I have set aside a specific block of time everyday(one hour or even more) to work <br>
-  on my goal.
+<h4><div ="GoalHeading">  The goals checklist:(on this site we are primarily focused on career goals right now.)</div></h4><br>
 
-  <li>I do something  every single day in the specified time to achieve my goal.<li><br><br><br>
+<ol class="GoalList">
+  <li>I have a clear ,specific goal.</li><br>
+<li>I have set a deadline to achieve that goal.</li><br>
+<li>I found out the specialized knowledge and skills that  I need to achieve the goal.</li><br>
+<li>I have listed all the things I need to do or practice in order to achieve the goal.</li><br>
+<li>I have oraganized the list into a sequence of steps that I need to take in order
+     to achieve my goal.</li><br>
+<li>I know which 20% of the things will produce 80% of the result.</li><br>
+<li>I have set aside a specific block of time everyday(one hour or even more) to work
+on my goal.</li><br>
+
+<li>I do something  every single day in the specified time to achieve my goal.</li><br><br><br>
 </ol>
+
+
+
+<div class="GoalFooter">
   If the answer to all above steps is Yes then soon you will meets success at<br>
   your biggest goals in common hours.<br><br><br>
 
@@ -41,31 +46,46 @@ The above mentioned paragraph is the secret to huge success.
 <h4><b>Target one Career.</b></h4>
 <hr>
 <br><br><br>
+</div>
 
     <H1>Here is your goal.</h1>
-    <div class="row">
-      <ol>
-      {%for g in goal%}
-      <div class="column">
-        <div class="card5">
-      <li><b>Subject skill :</b >{{g.Goal_subject}}<br>
-      <b>Url :</b><a href="{{g.Subject_Url}}">Go to link</a></li></div></div>
-      {%endfor%}
- </ol></div>
+      <div class="row">
+        <ol>
+
+          {%for g in goal%}
+
+
+             {%if g.Price != 0 %}
+              <div class="column">
+              <div class="card11">
+                <li><b>Subject skill :</b >{{g.Goal_subject}}<br>
+                <b>Url :</b><a href="{{g.Subject_Url}}" class="button2">Go to link</a></li>
+              </div></div>
+              {%else%}
+              <div class="column">
+              <div class="card11">
+                <li><b>Subject skill :</b >{{g.Goal_subject}}</li>
+
+                <b>Url :</b><a href="{{g.Subject_Url}}"class="button2">Go to link</a>
+              </div></div>
+              {%endif%}
+               {%endfor%}</ol></div>
+
+
 <br><br>
       <form method="POST" class="form">
 
         {% csrf_token %}
-        <label for="Subject">Subject</label>
+
         <input type="text" name="Subject" placeholder="Enter Subject"><br><br>
 
-        <label for="Url">Url</label>
+
         <input type="url" name="Url" placeholder="Enter Url"><br><br>
 
       {% buttons %}
           <button type="submit" class="btn btn-primary">Submit</button>
       {% endbuttons %}
-  </form></div>
+  </form>
   {%if message%}<script>
       alert('{{ message }}');
   </script>{%endif%}

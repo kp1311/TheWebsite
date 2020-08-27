@@ -4,13 +4,14 @@
     Add it to the Website.<br><br></div>
 
 <div class="orange">  <a href="{% url 'FirstApp:AddResource' %}" class="button2">Add a resource</a><br><br></div>
-<div class="row">
+
 <br><br>
 
-<b>Want excellent advice and guidance in {{field1}} field which would give you an edge<br>
- visit our Advice and experience page at</b> <br><br>
+<b><div class="white">Want excellent advice and guidance in {{field1}} field which would give you an edge<br>
+ visit our Advice and experience page at</div></b> <br><br>
 <a href="{% url 'FirstApp:AdvicePathsExperienceResources' %}" class="button2">Visit the page</a>
 <br><br><br>
+<div class="row">
   <ol>
 
     {%for resource in Resource%}

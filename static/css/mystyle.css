@@ -342,10 +342,29 @@ li a:hover {
   height: auto;
   font-size: 16px;
  border: 2px solid white;
-  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(11, 83, 140,1));
+  background-color:  rgba(11, 83, 140);
 }
 
 .center{
 
   margin: auto;
+}
+
+.GoalList,.GoalHeading,.GoalFooter{
+   font-size: 20px;
+   color: white;
+  display: table;
+  margin: 0 auto;
+}
+.card11 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: 100px;
+  font-size: 16px;
+ border: 2px solid white;
+background-color:  rgba(11, 83, 140);
 }
