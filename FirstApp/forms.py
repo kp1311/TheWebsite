@@ -13,14 +13,31 @@ class RegisterForm(UserCreationForm):
 	       fields = ["username", "email", "password1", "password2"]
 
 class ProfessionalResourcesForm(forms.ModelForm):
+    Released_On= forms.DateField(
+        widget=forms.DateInput(attrs={'placeholder':'yyyy-mm-dd'}))
+
     class Meta:
         model=Professional_Resources
-        fields='__all__'
+        exclude=[]
+
+        widgets={
+
+
+        }
 
 class Personal_Development_ResourcesForm(forms.ModelForm):
+    Released_On= forms.DateField(
+        widget=forms.DateInput(attrs={'placeholder':'yyyy-mm-dd'}))
+
     class Meta:
         model=Personal_Development_Resources
-        fields='__all__'
+        exclude=[]
+
+        widgets={
+
+
+        }
+
 
 class Financial_Success_ResourcesForm(forms.ModelForm):
     class Meta:

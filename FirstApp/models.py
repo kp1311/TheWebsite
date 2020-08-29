@@ -27,6 +27,8 @@ class Professional_Resources(models.Model):
         return self.Title
 
 
+
+
 class Personal_Development_Resources(models.Model):
     Author=models.CharField(max_length=25)
     Name_Of_Resource=models.CharField(max_length=100)
