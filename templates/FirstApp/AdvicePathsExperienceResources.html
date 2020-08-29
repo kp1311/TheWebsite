@@ -7,10 +7,10 @@ Here we provide you advice and guidance form the people who are the best at what
 <br>
 <form action="{%url 'FirstApp:ThePage'%}" >
 
-  <select name="field" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+  <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
     <option selected="selected" disabled>Field</option>
     <option >Backup</option>
-    <option >Bank Po</option>
+    <option >Bank_Po</option>
     <option >Business</option>
     <option >CAT</option>
     <option >IAS</option>
@@ -19,10 +19,21 @@ Here we provide you advice and guidance form the people who are the best at what
     <option >Medical</option>
     <option >Networking</option>
     <option >Software development</option>
-    <option >SSC CGL</option>
+    <option >SSC_CGL</option>
     <option >Storage</option>
     <option >Wintel</option>
   </select>
+  <br><br>
+  <select name="Experience" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    <option selected="selected" disabled>Experience level</option>
+    <option >College Students</option>
+    <option >0-2 yrs experience</option>
+    <option >2-5 yrs experience</option>
+    <option >5-10 yrs experience</option>
+    <option >10-15 yrs experience</option>
+    <option >15-20 yrs experience</option>
+
+  </select><br><br>
   <input type="submit" class="btn btn-primary" value="Select">
 
 

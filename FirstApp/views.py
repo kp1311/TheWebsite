@@ -244,8 +244,9 @@ def AdvicePathsExperienceResourcesView(request):
 
 
 def ThePageView(request):
-    field_variable = request.GET['field']
-    AllDetails= AddExperience.objects.filter(field=field_variable)
+    field_variable = request.GET['field_selected']
+    Experience1=request.GET['Experience']
+    AllDetails= AddExperience.objects.filter(field=field_variable).filter(Target_Section=Experience1)
 
     return render(request,'FirstApp/ThePage.html',{'AllDetails':AllDetails,'field1':field_variable})
 
@@ -271,7 +272,7 @@ def NewPageDetailsView(request):
     previous_date = today - datetime.timedelta(days=15)
     print(previous_date)
     print(type(previous_date))
-    AllDetails=Professional_Resources.objects.filter(Field=field_variable).filter(Released_On__lt=previous_date)
+    AllDetails=Professional_Resources.objects.filter(Field=field_variable).filter(Released_On__gte=previous_date)
     return render(request,'FirstApp/NewPageDetails.html',{'AllDetails':AllDetails,'Field':field_variable})
 
 def CommentsAndSuggestionsView(request):
