@@ -21,7 +21,7 @@ class Professional_Resources(models.Model):
     Type=models.CharField(max_length=20)
     Self_Email=models.EmailField(max_length=100)
     Price=models.IntegerField()
-    Released_On=models.DateField(null=True, blank=True)
+    Released_On=models.DateField()
 
     def __str__(self):
         return self.Title
@@ -36,7 +36,7 @@ class Personal_Development_Resources(models.Model):
     Type=models.CharField(max_length=25)
     Self_Email=models.EmailField(max_length=100)
     Price=models.IntegerField()
-    Released_On=models.DateField(null=True, blank=True)
+    Released_On=models.DateField()
 
     def __str__(self):
         return self.Name_Of_Resource
