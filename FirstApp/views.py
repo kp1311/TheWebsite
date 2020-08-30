@@ -257,11 +257,12 @@ def GetAJobView(request):
 def GetAJobDetailView(request):
     field_variable=request.GET['field_selected']
     experience=request.GET['Experience']
-    print (field_variable)
+    context=""
+
     field_variable=request.GET['field_selected']
     experience=request.GET['Experience']
     AllDetails= Professional_Resources.objects.filter(Field=field_variable).filter(Target_Audience=experience)
-    return render(request,'FirstApp/GetAJobDetail.html',{'AllDetails':AllDetails,'Field':field_variable,'Experience':experience})
+    return render(request,'FirstApp/GetAJobDetail.html',{'AllDetails':AllDetails,'context':context})
 
 def NewPageView(request):
     return render(request,'FirstApp/NewPage.html')
