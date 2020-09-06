@@ -8,9 +8,9 @@
       <input type="Password" name="password" placeholder="Enter Password"><br><br>
       <input type="Submit" value="Login" class="btn-primary">
     </form>
-<br>
-   Not registred yet?
-   Register at :<a href="{% url 'FirstApp:Registration' %}">Register</a>
+<br><br>
+   <div class="white">Not registred yet?
+   Register at :</div><a href="{% url 'FirstApp:Registration' %}" class="button2">Register</a>
 <br>
     {%if message%}<script>
         alert('{{ message }}');
