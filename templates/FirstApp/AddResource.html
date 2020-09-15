@@ -4,7 +4,7 @@
     <div class="AddResource">
   {%block Body_Block%}
   <br><br>
-
+<div class="registration">
     <form method="POST" class="form">
 
     {% csrf_token %}
@@ -13,6 +13,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     {% endbuttons %}
 </form></div>
+</div>
 {%if message%}<script>
     alert('{{ message }}');
 </script>{%endif%}

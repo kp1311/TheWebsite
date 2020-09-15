@@ -43,10 +43,12 @@ body, html {
   margin: 0;
 }
 #header{
-    background-color:#06307A  ;
-    width: auto;
-    height: auto;
-    background-size: cover;
+  background-image: url('../images/pexels-pixabay-267885.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
 }
 
 
@@ -89,14 +91,19 @@ box-shadow: 5px 10px 8px #888888;
 }
 
 .container{
-  background-image: url('../images/pexels-pixabay-267885.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:100%
-  color:white;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  color:black;
 
 }
+.Personaldevhompage{
+ height:200px;
+ width:33%;
+ background-color: blue;
+
+}
+
+
 
 
 .Homepage{
@@ -104,22 +111,22 @@ color:white;
 }
 
 .Tagline{
-  Color:white;
+  Color:black;
   font-size:30px;
 }
 .ValueProp1{
-  color:white;
+  color:black;
   font-size:20px;
 }
 
 .ValueProp2{
-  color:white;
+  color:black;
 font-size:20px;
 }
 
 .Title{
   font-size:100px;
-color:white;
+color:black;
  font-size:8vw;
 }
 
@@ -167,9 +174,18 @@ color:white;
   width: 25%;
   padding: 0 10px;
 }
+.columnhome {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {margin: 0 -5px;
+color:white;}
+
+.rowhome {margin: 0 -5px;
 color:white;}
 
 /* Clear floats after the columns */
@@ -178,6 +194,12 @@ color:white;}
   display: table;
   clear: both;
 }
+.rowhome:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 /* Style the counter cards */
 .card {
@@ -189,8 +211,45 @@ color:white;}
   width: 200px;
   height: 100px;
 
-  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(11, 83, 140,1));
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(8, 106, 5 ,1));
 }
+.cardhome1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+
+  height: 300px;
+
+  background-image: linear-gradient(to top, rgba(255,255,255), rgba(10, 106, 5   ));
+}
+
+.cardhome2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+
+  height: 300px;
+
+  background-image: linear-gradient(to top, rgba(255,255,255), rgba(7, 22, 241  ));
+}
+
+.cardhome3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+
+  height: 300px;
+
+  background-image: linear-gradient(to top, rgba(255,255,255), rgba(251, 8, 4  ));
+}
+
+
 .card2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 5px;
@@ -200,7 +259,7 @@ color:white;}
   width: 200px;
   height: 100px;
 
-  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(7, 100, 187  ,1));
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(7, 22, 241 ,1));
 }
 
 .card4 {
@@ -212,7 +271,7 @@ color:white;}
   width: 200px;
   height: 300px;
 
-  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(7, 100, 187  ,1));
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(10, 106, 5 ,1));
 }
 .card3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
@@ -297,7 +356,7 @@ color:white;
   width: 200px;
   height: 300px;
 
-  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1));
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(251, 8, 4,1));
 }
 .white{
 color:white;
@@ -352,7 +411,7 @@ li a:hover {
 
 .GoalList,.GoalHeading,.GoalFooter{
    font-size: 20px;
-   color: white;
+   color: black;
   display: table;
   margin: 0 auto;
 }
@@ -367,4 +426,34 @@ li a:hover {
   font-size: 16px;
  border: 2px solid white;
 background-color:  rgba(11, 83, 140);
+}
+
+.card12 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: 300px;
+   background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(7, 22, 241 ,1));
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #042B8C;
+  color: white;
+}
+
+.share1head{
+ border:2px solid white;
+ background-color:	#F8D007 ;
+ color:white;
+height:auto;
+width:auto;
+}
+.tophome{
+width:100%;
+height:auto;
+background-image: linear-gradient(to top, rgba(255,255,255), rgba(7, 22, 241  ))
 }

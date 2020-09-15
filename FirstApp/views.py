@@ -14,6 +14,18 @@ from .forms import RegisterForm
 from django.contrib import messages
 
 
+def ContactUsView(request):
+    return  render(request, "FirstApp/ContactUs.html" )
+
+def ShareUsView(request):
+    return  render(request, "FirstApp/ShareUs.html" )
+
+def AboutUsView(request):
+    return  render(request, "FirstApp/AboutUs.html" )
+
+def Share1View(request):
+    return  render(request, "FirstApp/Share1.html" )
+
 def detail12345(request):
     field1 = request.GET.get('field')
     resource=Professional_Resources.objects.filter(Field=field1).order_by('Title')

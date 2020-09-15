@@ -1,7 +1,7 @@
 {% extends "FirstApp/Base.html"%}
 {% load bootstrap3 %}
 {%block Body_Block%}<br><br>
-  <div class="white">  <H1>This is your Library.</h1>
+  <div >  <H1>This is your Library.</h1>
       <h4>Build a virtual library with most important resources in your field.</h4>
       <ol>
     <div class="row">
@@ -24,8 +24,9 @@
     </ol>
 </div>
 <br><br><br>
+<h3><div >Enter a resource into your library.</div></h3>
+<div class="registration">
 
-<h3><div class="white">Enter a resource into your library.</div></h3>
       <form method="POST" class="form">
 
       {% csrf_token %}
@@ -39,7 +40,7 @@
       {% buttons %}
           <button type="submit" class="btn btn-primary">Submit</button>
       {% endbuttons %}
-  </form></div>
+  </form></div></div>
   {%if message%}<script>
       alert('{{ message }}');
   </script>{%endif%}

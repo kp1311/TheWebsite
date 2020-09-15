@@ -1,13 +1,13 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}<br><br>
-  <div class="white">  Know about a good resource that you dont find on our website,<br>
+  <div >  Know about a good resource that you dont find on our website,<br>
     Add it to the Website.<br><br></div>
 
 <div class="orange">  <a href="{% url 'FirstApp:AddResource' %}" class="button2">Add a resource</a><br><br></div>
 
 <br><br>
 
-<b><div class="white">Want excellent advice and guidance in {{field1}} field which would give you an edge<br>
+<b><div >Want excellent advice and guidance in {{field1}} field which would give you an edge<br>
  visit our Advice and experience page at</div></b> <br><br>
 <a href="{% url 'FirstApp:AdvicePathsExperienceResources' %}" class="button2">Visit the page</a>
 <br><br><br>
@@ -18,7 +18,7 @@
 
    {%if resource.Price != 0 %}
         <div class="column">
-        <div class="card4"><li><b>Title :{{resource.Title}}</b></li>
+        <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
         <b>Author :</b>{{resource.Author}}<br>
         <b>Description :</b>{{resource.Description}}<br>
       <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>

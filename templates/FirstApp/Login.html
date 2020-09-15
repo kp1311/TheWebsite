@@ -2,14 +2,14 @@
 {%block Body_Block%}
     <form action="{%url 'FirstApp:user_login'%}" method='POST'>
       {%csrf_token%}<br><br>
-      <label for="username"><div class="white">Username</div></label>
+      <label for="username"><div >Username</div></label>
       <input type="text" name="username" placeholder="Enter Username"><br><br>
-      <label for="password"><div class="white">Password</div></label>
+      <label for="password"><div >Password</div></label>
       <input type="Password" name="password" placeholder="Enter Password"><br><br>
       <input type="Submit" value="Login" class="btn-primary">
     </form>
 <br><br>
-   <div class="white">Not registred yet?
+   <div >Not registred yet?
    Register at :</div><a href="{% url 'FirstApp:Registration' %}" class="button2">Register</a>
 <br>
     {%if message%}<script>

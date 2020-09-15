@@ -15,7 +15,7 @@
 
   <body >
 <div id="header">
-<div class="container" style="background-color: rgba(255, 255, 255, 0.30)">
+<div class="container" >
 
 <ul>
 
@@ -47,13 +47,17 @@
             {%endif%}
 
 </div>
-
-
+<!--<div class="share1head">
+<h3>I wish my family and friends could also get a high paying job or increase their salary<br>
+mulitiple times and become one of most expert and respected people in their field.
+Or if you like our mission then please support us by spreading word about us.<br>
+<a href="{%url 'FirstApp:Share1'%}" class="button2">Click here</a></h3></div>
+-->
 
 
 
    {%block Body_Block%}
-<div >
+<div ><div class="tophome"><br><br>
 <div class="Title">
   Careerboost<br></div>
 
@@ -66,13 +70,21 @@ top 10 % income earners in your field,now know what made best the best.</div><br
 <div class="ValueProp2">
 We also bring to you personal development and financial success resources which<br>
 will change your life for good forever.</div>
-</div>
 <br><br><br>
-<a href="{% url 'FirstApp:Personal_Development' %}" class="button"> Personal Development</a>
+</div>
+<div class="rowhome">
+  <div class="columnhome">
+    <div class="cardhome1"><a href="{% url 'FirstApp:Personal_Development' %}"class="button2" > Personal Development</a></div>
+  </div>
+  <div class="columnhome">
+    <div class="cardhome2"><a href="{% url 'FirstApp:Professional_Development' %}" class="button2">Professional Development </a></div>
+  </div>
 
-<a href="{% url 'FirstApp:Professional_Development' %}" class="button">Professional Development </a>
-<a href="{% url 'FirstApp:Financial_Success' %}" class="button">Financial Success</a>
+  <div class="columnhome">
+    <div class="cardhome3"><a href="{% url 'FirstApp:Financial_Success' %}" class="button2">Financial Success</a></div>
+  </div>
 
+  </div>
 
 {%endblock%}
 
@@ -85,10 +97,17 @@ will change your life for good forever.</div>
 <br>
 <br>
 <br>
-<hr>
 
-<div class="white">The website does not guarantee a high paying job or increase in salary and other things, it only provides the best guidance on these topics.</div>
-<br>
+<footer>
+  <div class="white">The website does not guarantee a high paying job or increase in salary and other things, it only provides the best guidance on these topics.</div>
+  <br>
+<a href="{% url 'FirstApp:AboutUs' %}">About Us</a><br>
+<a href="{% url 'FirstApp:ContactUs' %}">Contact us</a><br>
+<a href="{% url 'FirstApp:ShareUs' %}">Share with friends and family</a><br>
+<a href="{% url 'FirstApp:CommentsAndSuggestions' %}">Leave a feedback</a>
+
+</footer>
+
 
 </div>
 </div>

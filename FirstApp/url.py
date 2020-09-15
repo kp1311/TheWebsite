@@ -28,6 +28,9 @@ url(r'^GetAJobDetail/$',views.GetAJobDetailView,name='GetAJobDetail'),
 url(r'^NewPage/$',views.NewPageView,name='NewPage'),
 url(r'^NewPageDetails/$',views.NewPageDetailsView,name='NewPageDetails'),
 url(r'^CommentsAndSuggestions/$',views.CommentsAndSuggestionsView,name='CommentsAndSuggestions'),
-
+url(r'^AboutUs/$',views.AboutUsView,name='AboutUs'),
+url(r'^ShareUs/$',views.ShareUsView,name='ShareUs'),
+url(r'^ContactUs/$',views.ContactUsView,name='ContactUs'),
+url(r'^Share1/$',views.Share1View,name='Share1'),
 
 ]
