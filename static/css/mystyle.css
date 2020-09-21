@@ -146,7 +146,7 @@ color:black;
 
 .button3 {
    border: 2px solid white;
-  background-color: rgb(10, 106, 5);
+  background-color: #0a6a05;
 
   color: white;
   padding: 5px 15px;
@@ -160,7 +160,7 @@ color:black;
 
 .button4  {
    border: 2px solid white;
-  background-color:rgb(7, 22, 241);
+  background-color:#07f2f1;
 
   color: white;
   padding: 5px 15px;
@@ -173,7 +173,7 @@ color:black;
 }
 .button5 {
    border: 2px solid white;
-  background-color: rgb(251, 8, 4);
+  background-color: #FB0840;
 
   color: white;
   padding: 5px 15px;
