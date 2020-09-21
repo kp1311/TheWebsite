@@ -208,6 +208,21 @@ color:black;
   color: white;
 
 }
+.button3:hover {
+  background-color: #F58908  ;
+  color: white;
+
+}
+.button4:hover {
+  background-color: #F58908  ;
+  color: white;
+
+}
+.button5:hover {
+  background-color: #F58908  ;
+  color: white;
+
+}
 
 
 .column {
@@ -226,16 +241,9 @@ color:black;
 .row {margin: 0 -5px;
 color:white;}
 
-.rowhome {margin: 0 -5px;
-color:white;}
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.rowhome:after {
   content: "";
   display: table;
   clear: both;
@@ -253,41 +261,6 @@ color:white;}
   height: 100px;
 
   background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(8, 106, 5 ,1));
-}
-.cardhome1 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 5px;
-
-  horizontal-align:center;
- vertical-align: center;
-
-  height: 300px;
-
-  background-image: linear-gradient(to top, rgba(255,255,255), rgba(10, 106, 5   ));
-}
-
-.cardhome2 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 5px;
-
-  horizontal-align:center;
- vertical-align: center;
-
-  height: 300px;
-
-  background-image: linear-gradient(to top, rgba(255,255,255), rgba(7, 22, 241  ));
-}
-
-.cardhome3 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 5px;
-
-  horizontal-align:center;
- vertical-align: center;
-
-  height: 300px;
-
-  background-image: linear-gradient(to top, rgba(255,255,255), rgba(251, 8, 4  ));
 }
 
 
