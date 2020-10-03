@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 {% extends "FirstApp/Base.html"%}
 
-{%block Body_Block%}
-<div ><h1>Welcome to personal development page</h1>
+{%block Body_Block%}<br>
+<div class="PersonDev "><div class="white"><h1>Welcome to personal development page</h1></div>
 <h3>This page is for college students and working professionals.It contains a<br>
    list of best personal development coaches in the world.<br>
-  They provide life transforming information,which could change<br> your<br>
- family life,physical health,carrer, financial life and Personal life for good forever.</h3>
-<br><br><br></div>
+  They provide life transforming information,which could change your<br>
+ family life,physical health,career, financial life and Personal life for good forever.</h3>
+<br><br><br>
 
 <a href="{% url 'FirstApp:Add_Personal_Development_Resource' %}" class="button2">Add a resource</a><br><br>
+</div>
 
+<br><br>
 <div class="row">
   <div class="column">
     <div class="card"><a href="/DetailPersonalDevelopment/?author=Brian Tracy">Brian Tracy</a></div>

@@ -66,26 +66,28 @@ Or if you like our mission then please support us by spreading word about us.<br
 
 
    {%block Body_Block%}
+   <br>
 <div ><div class="tophome"><br><br>
-<div class="Title white">
+<div class="Title ">
   Careerboost<br></div>
 
-<div class="Tagline white">Be Better,Do Better,Live Better.<br></div>
+<div class="Tagline">Be Better,Do Better,Live Better.<br></div>
+</div>
 <br><div class="ValueProp1" >This site is for college students and working professionals<br>
 .</div>
-<br><div class="ValueProp1" >We bring to you resources,advice,guidance to enable you to get a high paying<br>
-job or increase you income by 2x,3x,4x,5x or 10x.It enables you to be the most respected, <br>
-most knowledgebale most expert people in your field  .</div><br><br>
-<a href="{% url 'FirstApp:AboutUs' %}" class="button2">Know more about us</a>
-<br><br><br>
-</div>
+<br><div class="ValueProp2" >We bring to you resources,advice,guidance to enable you to get a high paying<br>
+job or increase you income by 2x,3x,4x,5x or 10x.<br><br>
+<a href="{% url 'FirstApp:AboutUs' %}" class="button2">Know more about us</a></div>
+<br>
+<div class="Links">
 <a href="{% url 'FirstApp:Personal_Development' %}" class="button2" > Personal Development</a>
 
   <a href="{% url 'FirstApp:Professional_Development' %}" class="button2">Professional Development </a>
   <a href="{% url 'FirstApp:Financial_Success' %}" class="button2">Financial Success</a>
-
+</div>
 
 </div>
+
 
 {%endblock%}
 
@@ -102,10 +104,10 @@ most knowledgebale most expert people in your field  .</div><br><br>
 <footer>
   <div class="white">The website does not guarantee a high paying job or increase in salary and other things, it only provides the best guidance on these topics.</div>
   <br>
-<a href="{% url 'FirstApp:AboutUs' %}">About Us</a><br>
-<a href="{% url 'FirstApp:ContactUs' %}">Contact us</a><br>
-<a href="{% url 'FirstApp:ShareUs' %}">Share with friends and family</a><br>
-<a href="{% url 'FirstApp:CommentsAndSuggestions' %}">Leave a feedback</a>
+<a href="{% url 'FirstApp:AboutUs' %}">About Us</a>  ||
+  <a href="{% url 'FirstApp:ContactUs' %}">Contact us</a>  ||
+  <a href="{% url 'FirstApp:ShareUs' %}">Share with friends and family</a>  ||
+  <a href="{% url 'FirstApp:CommentsAndSuggestions' %}">Leave a feedback</a>  ||
 
 </footer>
 

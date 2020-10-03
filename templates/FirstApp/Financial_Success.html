@@ -1,13 +1,14 @@
 {%extends "FirstApp/Base.html"%}
     <title>Backup</title>
 
-{%block Body_Block%}<br><br>
+{%block Body_Block%}<br>
+<div class="FinanceSuccess"><div class="white"><h1>Welcome to financial success page.</h1></div>
+  <h3>It is not what you earn that makes you rich it is what you keep.Learn the <br>
+the best ideas about financial success and let your money eaern more money by itself.</h3>
 
-<div >   Know about a good resource that you dont find on our website,<br>
-   Add it to the Website.<br></div>
 <br>
  <a href="{% url 'FirstApp:Add_Financial_Success_Resource' %}"class="button2">Add a resource</a>
-<br><br>
+<br><br></div><br>
 <div class="row">
  <ol>
    {%for resource in Resource%}
