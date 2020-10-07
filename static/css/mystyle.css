@@ -632,6 +632,7 @@ font-size:20px;
   width:auto;
   height:auto;
 
+
  border: 3px solid white;
   border-radius:15px;
   padding: 35px;
@@ -641,6 +642,20 @@ font-size:20px;
   box-shadow: 5px 10px 8px #888888;
 
 }
+.bodypersonaldev{
+  width:auto;
+  height:auto;
+ font-family: 'Roboto', sans-serif;
+  border: 3px solid white;
+  border-radius:15px;
+  padding: 35px;
+  background-image: linear-gradient(to top, rgba(255,255,255), #046C05);
+  background-color:#046C05;
+  color:black;
+  box-shadow: 5px 10px 8px #888888;
+
+}
+
 .ProfessDev{
 
   width:auto;
@@ -653,6 +668,21 @@ font-size:20px;
   background-color:#046C05;
   color:black;
   box-shadow: 5px 10px 8px #888888;
+
+}
+
+.Professionaldevbody{
+  font-family: 'Roboto', sans-serif;
+    width:auto;
+    height:auto;
+
+   border: 3px solid white;
+    border-radius:15px;
+    padding: 35px;
+   background-image: linear-gradient(to top, rgba(255,255,255), #4169e1);
+    background-color:#046C05;
+    color:black;
+    box-shadow: 5px 10px 8px #888888;
 
 }
 

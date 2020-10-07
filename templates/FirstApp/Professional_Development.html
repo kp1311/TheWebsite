@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+
 {% extends "FirstApp/Base.html"%}
+{% load static %}
 
 {%block Body_Block%}
 <br>
-<div class="ProfessDev"><div class="white"><h1>Welcome to Professional development page</h1></div>
-<h3>This page is for college students and working professionals.It contains a<br>
-   list various fields ,we provide you the best resources in each<br>
+
+
+
+<div class="ProfessDev"><h1>Welcome to Professional development page</h1></div><br>
+<div class="Professionaldevbody"><h3>This page is for college students and working professionals.</h3></div><br>
+  <div class="Professionaldevbody"><h3>It contains a list various fields ,we provide you the best resources in each<br>
    of these fields which will enable you to get a high paying job, increase your <br>
    salry by 2x,3x,4x,5x and 10x or simply ,become one of the best in the <b>world</b> <br>
    at what you do. </h3><br>
@@ -16,57 +20,86 @@
 <div class="row">
 
   <div class="column">
-    <div class="card2"><a href="/detail12345/?{{resource}}">Backup(Infra)</a></div>
+    <div class="card2"><div><a href="/detail12345/?{{resource}}">Backup(Infra)</a></div><br>
+    <div><img src="{% static "images/backup.jpg" %}" height=40px width=40px></div>
+  </div>
   </div>
   <div class="column">
-    <div class="card2"><a href="/detail12345/?field=Bank Po">Bank_Po</a></div>
-  </div>
+    <div class="card2"><div><a href="/detail12345/?field=Bank Po">Bank_Po</a></div><br>
+    <div><img src="{% static "images/bank.webp" %}" height=40px width=40px></div>
+  </div></div>
   <div class="column">
-    <div class="card2"><a href="/detail12345/?field=Data analyst">Data Analyst</a></div>
+    <div class="card2"><div><a href="/detail12345/?field=Data analyst">Data Analyst</a></div><br>
+   <div><img src="{% static "images/person-explaining-strategy-on-a-board-with-a-sketch.png" %}" height=40px width=40px></div>
+</div>
+
   </div>
 
   <div class="column">
-    <div class="card2"><a href="/detail12345/?field=Business">Business</a></div>
+    <div class="card2"><div><a href="/detail12345/?field=Business">Business</a></div><br>
+      <div><img src="{% static "images/corporate-business-8-1167082.webp" %}" height=40px width=40px></div>
+    </div>
   </div>
   <div class="column">
-    <div class="card2"><a href="/detail12345/?field=CAT">CAT</a></div>
+    <div class="card2"><div><a href="/detail12345/?field=CAT">CAT</a></div>
+<div><img src="{% static "images/mba.png" %}" height=40px width=40px></div>
+  </div>
   </div>
 
   <div class="column">
-    <div class="card2"> <a href="/detail12345/?field=Database">Database(Infra)</a></div>
-  </div>
+    <div class="card2"><div> <a href="/detail12345/?field=Database">Database(Infra)</a></div><br>
+      <div><img src="{% static "images/search-database-19-983240.webp" %}" height=40px width=40px></div>
+  </div></div>
 <div class="column">
-    <div class="card2"><a href="/detail12345/?field=GMAT">GMAT</a></div>
+    <div class="card2"><div><a href="/detail12345/?field=GMAT">GMAT</a></div>
+<div><img src="{% static "images/gmat.jpg" %}" height=40px width=40px></div>
   </div>
-  <div class="column">
-    <div class="card2"><a href="/detail12345/?field=IAS">IAS</a></div>
-  </div>
-  <div class="column">
-    <div class="card2"><a href="/detail12345/?field=Linux">Linux(Infra)</a></div>
   </div>
   <div class="column">
-    <div class="card2"> <a href="/detail12345/?field=Medical">Medical</a></div>
+    <div class="card2"><div><a href="/detail12345/?field=IAS">IAS</a></div>
+ <div><img src="{% static "images/civilservices.png" %}" height=40px width=40px></div>
+  </div>
   </div>
   <div class="column">
-    <div class="card2"><a href="/detail12345/?field=Networking">Networking(Infra)</a></div>
+    <div class="card2"><div><a href="/detail12345/?field=Linux">Linux(Infra)</a></div>
+    <div><img src="{% static "images/linux.png" %}" height=40px width=40px></div>
+    </div>
   </div>
   <div class="column">
-    <div class="card2"><a href="/detail12345/?field=Software development">Software_Developmemt</a></div>
+    <div class="card2"> <div><a href="/detail12345/?field=Medical">Medical</a></div><br>
+  <div><img src="{% static "images/a-85-512.png" %}" height=40px width=40px></div></div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detail12345/?field=Networking">Networking(Infra)</a></div><br>
+ <div><img src="{% static "images/network.webp" %}" height=40px width=40px></div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detail12345/?field=Software development">Software_Developmemt</a></div><br>
+   <div><img src="{% static "images/kisspng-web-development-php-software-developer-programmer-computer-user-icon-svg-5ab0fde8b1e707.4897380415215487767287.jpg" %}" height=40px width=40px></div>
+  </div>
 </div>
 <div class="column">
-  <div class="card2"><a href="/detail12345/?field=SSC CGL">SSC_CGL</a></div>
+  <div class="card2"><div><a href="/detail12345/?field=SSC CGL">SSC_CGL</a></div><br>
+ <div><img src="{% static "images/ssc.png" %}" height=40px width=40px></div></div>
 </div>
 <div class="column">
-  <div class="card2"><a href="/detail12345/?field=Storage">Storage</a></div>
+  <div class="card2"><div><a href="/detail12345/?field=Storage">Storage</a></div><br>
+ <div><img src="{% static "images/storage.jpg" %}" height=40px width=40px></div>
+</div>
 </div>
 <div class="column">
-  <div class="card2"><a href="/detail12345/?field=Swimming">Swimming</a></div>
+  <div class="card2"><div><a href="/detail12345/?field=Swimming">Swimming</a></div><div>
+  <img src="{% static "images/swim-512.png" %}" height=40px width=40px></div></div>
 </div>
 <div class="column">
-  <div class="card2"><a href="/detail12345/?field=Wintel">Wintel(Infra)</a></div>
+  <div class="card2"><div><a href="/detail12345/?field=Wintel">Wintel(Infra)</a></div>
+  <div><img src="{% static "images/Windows_window_interface_microsoft.webp" %}" height=40px width=40px></div>
+</div>
 </div>
 <div class="column">
-  <div class="card2"><a href="/detail12345/?field=Law">Law</a></div>
+  <div class="card2"><div><a href="/detail12345/?field=Law">Law</a></div><br>
+<div><img src="{% static "images/law-512.webp" %}" height=40px width=40px></div></div>
 </div>
 
 
