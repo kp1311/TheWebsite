@@ -2,6 +2,7 @@
 {%block Body_Block%}
 {% load bootstrap3 %}
 <div ><br><br>
+  <div class="challenge">
 <p>Benefit you receive by accomplishing this challenge</p>
 
     In this challenge you have to study an hour a day for your chosen field.<br>
@@ -9,7 +10,8 @@
     3 years.In 5 Years you will become the best in your country<br>
     In 7 years you will become best in the world at what you do.<br>
     And consequently one of the highest income earners in your field.<br>
-
+</div><br>
+<div class="challenge">
     Your Status:<br>
 
             {%for p in Challenge1Status%}
@@ -17,16 +19,20 @@
             Hours Spent learning :{{p.Hours_spent_learning}}
             {%endfor%}
 
+</div>
+</div>
+<br>
 
-<br><br><br>
+
+<div class="challenge">
       <form  method='POST'>
         {%csrf_token%}
         <label for="hours">Hours spent learning today</label>
         <input type="number" name="Time" placeholder="Enter Time">
-        <input type="Submit" value="Login" class="btn-primary">
+        <input type="Submit" value="Submit" class="btn-primary">
       </form>
 
-</div>
+</div></div>
       {%if message%}<script>
           alert('{{ message }}');
       </script>{%endif%}

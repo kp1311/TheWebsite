@@ -2,18 +2,20 @@
 
 {%block Body_Block%}
 {% load bootstrap3 %}
-<div >
-<h1>This is the ultimate thing,<br>GOALS</h1>
- Goal play such an important role in success that we have devted a seperate <br>
+<div ><br>
+<div class="goalpage"><h1>This is the ultimate thing,<br>GOALS</h1></div><br>
+ <div class="goalpage">Goal play such an important role in success that we have devted a seperate <br>
  page to it.This is one of the most important page on this website.<br>
- <h4>Do this one thing and it will change your life forever.</h4>
+ <h4>Do this one thing and it will change your life forever.</h4></div>
 <br>
- A person with a goal accomplishes vastly more than a person who does not set goal<br>
+ <div class="goalpage">A person with a goal accomplishes vastly more than a person who does not set goal<br>
  Here is a life changing video to on goals.<br><br>
- <a href="https://www.youtube.com/watch?v=XktHAwYK1Xw" class="button">Go to video</a>
-<br><br><br>
+ <a href="https://www.youtube.com/watch?v=XktHAwYK1Xw" class="button">Go to video</a></div>
+<br>
 <p>
   <hr>
+
+<div class="goalpage">
 <h4><div ="GoalHeading">  The goals checklist:(on this site we are primarily focused on career goals right now.)</div></h4><br>
 
 <ol class="GoalList">
@@ -47,7 +49,8 @@ The above mentioned paragraph is the secret to huge success.
 <hr>
 <br><br><br>
 </div>
-
+</div><br>
+<div class="goalpage">
     <H1>Here is your goal.</h1>
       <div class="row">
         <ol>
@@ -72,9 +75,9 @@ The above mentioned paragraph is the secret to huge success.
                {%endfor%}</ol></div></div>
 
 
-<br><br><br><br><br>
-
-<h1>Enter resources for you goal</h1>
+<br>
+</div>
+<div class="goalpage2"><h1>Enter resources for you goal</h1>
       <form method="POST" class="form">
 
         {% csrf_token %}
@@ -88,7 +91,7 @@ The above mentioned paragraph is the secret to huge success.
           <button type="submit" class="btn btn-primary">Submit</button>
       {% endbuttons %}
   </form>
-
+</div>
   {%if message%}<script>
       alert('{{ message }}');
   </script>{%endif%}

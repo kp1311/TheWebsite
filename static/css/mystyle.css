@@ -61,7 +61,7 @@ height:auto;
  border: 3px solid white;
  border-radius: 15px;
   padding: 20px;
-  background-color:#4169e1;
+  background-color:#60D7FA;
   border:
   box-shadow: 5px 10px 8px #888888;
 
@@ -71,10 +71,83 @@ height:auto;
 }
 
 .registration ,.FinancialResources,.PersonalDevelopmentResources,.Experience,.AddResources{
-      box-shadow: 5px 10px 8px #888888;
-    background-color:  rgba(239, 243, 249  ,0.90);
+
+ box-shadow: 5px 10px 8px #888888;
+    background-color:#DCDCDC;
     width:auto;
     height:auto;
+    border-radius: 15px;
+    border:3px solid white;
+}
+
+.registrationpage2{
+  background-color: #60D7FA;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 8px #888888;
+border: 3px solid white;
+}
+
+.comments{
+  color:black;
+  font-size:20px;
+
+  border-radius:15px;
+  padding: 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color:#60D7FA;
+  border: 3px solid white;
+  box-shadow: 5px 10px 8px #888888;
+
+
+}
+.jobpage{
+
+  color:black;
+font-size:20px;
+
+border-radius:15px;
+padding: 20px;
+font-family: 'Montserrat Alternates', sans-serif;
+background-color:#60D7FA;
+border: 3px solid white;
+box-shadow: 5px 10px 8px #888888;
+
+}
+.library{
+  color:black;
+font-size:20px;
+
+border-radius:15px;
+padding: 20px;
+font-family: 'Montserrat Alternates', sans-serif;
+background-color:#60D7FA;
+border: 3px solid white;
+box-shadow: 5px 10px 8px #888888;
+
+
+}
+.challenge{
+  color:black;
+font-size:20px;
+
+border-radius:15px;
+padding: 20px;
+font-family: 'Montserrat Alternates', sans-serif;
+background-color:#60D7FA;
+border: 3px solid white;
+box-shadow: 5px 10px 8px #888888;
+}
+.goalpage{
+  color:black;
+font-size:20px;
+
+border-radius:15px;
+padding: 20px;
+font-family: 'Montserrat Alternates', sans-serif;
+background-color:#60D7FA;
+border: 3px solid white;
+box-shadow: 5px 10px 8px #888888;
 }
 
 .newpage {
@@ -133,14 +206,14 @@ color:white;
 .ValueProp1{
   color:black;
   font-size:20px;
-  text-shadow: 2px 2px #888888;
+
   border: 3px solid white;
   font-family: 'Montserrat Alternates', sans-serif;
 
 
   border-radius:15px;
   padding: 20px;
-  background-color:#4169e1;
+  background-color:#60D7FA;
 
   box-shadow: 5px 10px 8px #888888;
 
@@ -149,11 +222,11 @@ color:white;
 .ValueProp2{
   color:black;
 font-size:20px;
-text-shadow: 2px 2px #888888;
+
 border-radius:15px;
 padding: 20px;
 font-family: 'Montserrat Alternates', sans-serif;
-background-color:#4169e1;
+background-color:#60D7FA;
 border: 3px solid white;
 box-shadow: 5px 10px 8px #888888;
 
@@ -592,7 +665,7 @@ footer {
 }
 
 .share1head{
- border:2px solid white;
+ border:2px solFiid white;
  background-color:	#F8D007 ;
  color:white;
 height:auto;
@@ -606,7 +679,7 @@ height:auto;
 border: 3px solid white;
 border-radius:15px;
 padding: 35px;
-background-color:#4169e1;
+background-color:#60D7FA   ;
 color:white;
 box-shadow: 5px 10px 8px #888888;
 }
@@ -617,7 +690,7 @@ box-shadow: 5px 10px 8px #888888;
 border: 3px solid white;
    border-radius:15px;
    padding: 35px;
-   background-color:#4169e1;
+   background-color:#60D7FA;
    color:black;
    box-shadow: 5px 10px 8px #888888;
 
@@ -626,7 +699,7 @@ border: 3px solid white;
 .stand{
 
 font-size:20px;
- text-shadow: 2px 2px #888888;
+
 
 }
 
@@ -638,7 +711,7 @@ font-size:20px;
  border: 3px solid white;
   border-radius:15px;
   padding: 35px;
- background-image: linear-gradient(to top, rgba(255,255,255), #046C05);
+ background-image: linear-gradient(to top, rgba(255,255,255), #18F714);
   background-color:#046C05;
   color:black;
   box-shadow: 5px 10px 8px #888888;
@@ -651,7 +724,7 @@ font-size:20px;
   border: 3px solid white;
   border-radius:15px;
   padding: 35px;
-  background-image: linear-gradient(to top, rgba(255,255,255), #046C05);
+  background-image: linear-gradient(to top, rgba(255,255,255), #18F714);
   background-color:#046C05;
   color:black;
   box-shadow: 5px 10px 8px #888888;
@@ -685,6 +758,81 @@ font-size:20px;
     background-color:#046C05;
     color:black;
     box-shadow: 5px 10px 8px #888888;
+
+}
+
+.goalpage2{
+
+    width:auto;
+    height:auto;
+
+   border: 3px solid white;
+    border-radius:15px;
+    padding: 35px;
+   background-color:  #60D7FA;
+
+    color:black;
+    box-shadow: 5px 10px 8px #888888
+
+}
+
+.login{
+
+
+  width:auto;
+  height:auto;
+  font-family: 'Roboto', sans-serif;
+  border: 3px solid white;
+  border-radius:15px;
+  padding: 35px;
+  background-color:  #60D7FA;
+
+  color:black;
+  box-shadow: 5px 10px 8px #888888
+
+}
+
+.advice{
+
+
+  color:black;
+
+  width:auto;
+  height:auto;
+font-family: 'Roboto', sans-serif;
+ border: 3px solid white;
+  border-radius:15px;
+  padding: 35px;
+ background-color:  #60D7FA;
+
+  color:black;
+  box-shadow: 5px 10px 8px #888888
+}
+.advice2{
+  width:auto;
+  height:auto;
+'Roboto', sans-serif;
+ border: 3px solid white;
+  border-radius:15px;
+  padding: 35px;
+ background-color:  #60D7FA;
+
+  color:black;
+  box-shadow: 5px 10px 8px #888888
+
+}
+
+.challenge2{
+  width:auto;
+  height:auto;
+
+ border: 3px solid white;
+  border-radius:15px;
+  padding: 35px;
+ background-color:  #60D7FA;
+
+  color:black;
+  box-shadow: 5px 10px 8px #888888
 
 }
 

@@ -1,13 +1,14 @@
 {% extends "FirstApp/Base.html"%}
 {% load bootstrap3 %}
 {%block Body_Block%}
-    <br><div class="registration"><h1>Welome to regisrtation page</h1>
-    <h3>Register here to gain access to all the features of the website</h3>
+    <br><div class="registrationpage2"><h1>Welome to regisrtation page</h1></div><br>
+    <div class="registrationpage2"><h3>Register here to gain access to all the features of the website</h3></div>
 
-    <br><br>
+    <br>
+   <div class="registration">
     <h4>Registration form</h4>
-    <br><br></div>
-<div class="registration">
+    <br><br>
+
     <form method="POST" class="form">
 
     {% csrf_token %}

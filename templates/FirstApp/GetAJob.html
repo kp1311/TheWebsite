@@ -1,10 +1,11 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
-  <div >  <h1>This is a jobs Page</h1>
-    <h3>Select a field and experience level from the below dropdown list in which you want to get<br>
-    a high paying job.</h3>
+<br>
+  <div class="jobpage">  <h1>This is a jobs Page</h1></div><br>
+  <div class="jobpage">  <h3>Select a field and experience level from the below dropdown list in which you want to get<br>
+    a high paying job.</h3></div>
     <br><br>
-
+<div class="jobpage">
     <form action="{%url 'FirstApp:GetAJobDetail'%}" >
 
       <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">

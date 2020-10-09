@@ -1,5 +1,8 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}
+<br>
+<div class="login">
+
     <form action="{%url 'FirstApp:user_login'%}" method='POST'>
       {%csrf_token%}<br><br>
       <label for="username"><div >Username</div></label>
@@ -11,7 +14,7 @@
 <br><br>
    <div >Not registred yet?
    Register at :</div><a href="{% url 'FirstApp:Registration' %}" class="button2">Register</a>
-<br>
+<br></div>
     {%if message%}<script>
         alert('{{ message }}');
     </script>{%endif%}

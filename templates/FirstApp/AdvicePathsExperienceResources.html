@@ -1,10 +1,11 @@
 {%extends "FirstApp/Base.html"%}
 {%block Body_Block%}<br><br>
-<div >
+<div class="advice">
 <a href="{%url 'FirstApp:AddExperience'%}" class="button2">Add your experience </a><br><br>
 Here we provide you advice and guidance form the people who are the best at what they do<br>
 <br>From the below Dropdown menu select the field for which you want the advice and guidance</br>
-<br>
+<br></div><br>
+<div class="advice2">
 <form action="{%url 'FirstApp:ThePage'%}" >
 
   <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">

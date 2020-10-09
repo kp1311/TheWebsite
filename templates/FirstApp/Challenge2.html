@@ -1,11 +1,12 @@
 {% extends "FirstApp/Base.html"%}
 {% load bootstrap3 %}
 {%block Body_Block%}<br><br>
-  <div >  <p>You have to read a book a month in your chosen field. </p>
+  <div > <div class="challenge"> <p>You have to read a book a month in your chosen field. </p>
           <p>Benefit you receive By accompishing this challenge
             By reading a book a month you will enter the top 1% of
             <br>income earners in your field </p>
-
+</div><br>
+<div class="challenge2">
           <h3>  Your status:</h3><br>
 <div class="row">
 <ol>
@@ -30,7 +31,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             {% endbuttons %}
         </form>
-</div>
+</div></div>
         {%if message%}<script>
             alert('{{ message }}');
         </script>{%endif%}
