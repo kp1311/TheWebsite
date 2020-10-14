@@ -1,7 +1,7 @@
 from django import forms
 from FirstApp.models import (Professional_Resources,Personal_Development_Resources,
                              Financial_Success_Resources,MyGoal,MyLibrary,
-                             Challenge1,Challenge2,AddExperience,CommentsandSuggestions)
+                             Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice)
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -82,3 +82,16 @@ class CommentsandSuggestionsForm(forms.ModelForm):
     class Meta:
         model=CommentsandSuggestions
         fields="__all__"
+
+class AdviceForm(forms.ModelForm):
+    Released_On= forms.DateField(
+        widget=forms.DateInput(attrs={'placeholder':'yyyy-mm-dd'}))
+
+    class Meta:
+        model=Advice
+        exclude=[]
+
+        widgets={
+
+
+        }

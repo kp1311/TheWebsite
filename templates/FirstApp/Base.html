@@ -36,7 +36,7 @@
      <li><a href="{% url 'FirstApp:Professional_Development' %}">Professional Development</a></li>
      <li><a href="{% url 'FirstApp:Financial_Success' %}">Financial Success</a></li>
         <li><a href="{% url 'FirstApp:Registration' %}">Register</a></li>
-           
+
               <li><a href="{% url 'FirstApp:CommentsAndSuggestions' %}">Comments and suggestions</a></li>
             </ul>
 
@@ -44,13 +44,13 @@
 
 
 <div class="menu">
-    ||  <a href="{%url 'FirstApp:GetAJob'%}">Get A High Paying Job or Increase my salary</a>  ||
+
 
      <a href="{% url 'FirstApp:MyLibrary' %}">My Library</a>  ||
      <a href="{%url 'FirstApp:MyGoal'%}">My Goal </a> ||
 
            <a href="{%url 'FirstApp:Challenge'%}">Challenges</a>  ||
-            <a href="{%url 'FirstApp:AdvicePathsExperienceResources'%}">AdvicePathsExperienceResources</a>    ||
+            <a href="{%url 'FirstApp:AdvicePathsExperienceResources'%}">Advice</a>    ||
            {%if user.is_authenticated%}
             <a href="{%url 'logout'%}">Logout</a>
             {%else%}

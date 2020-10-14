@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
-from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm
-from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions
+from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm,AdviceForm
+from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice
 from datetime import date
 import datetime
 # Create your views here.
@@ -31,6 +31,11 @@ def detail12345(request):
     resource=Professional_Resources.objects.filter(Field=field1).order_by('Title')
 
     return  render(request, "FirstApp/detail12345.html",{'Resource':resource,'field1':field1} )
+
+def detailAdvice(request):
+     field1=request.GET.get('field')
+     resource=Advice.objects.filter(Field=field1).order_by('Title')
+     return  render(request, "FirstApp/detailAdvice.html",{"Resource":resource} )
 
 # Create your views here.
 def RegistrationView(response):
@@ -237,14 +242,14 @@ def ChallengeView(request):
 
 
 def AddExperienceView(request):
-    form=AddExperienceForm()
+    form=AdviceForm()
 
     if request.method=='POST':
-        form=AddExperienceForm(request.POST)
+        form=AdviceForm(request.POST)
 
         if form.is_valid():
            form.save(commit=True)
-           form=AddExperienceForm(request.POST)
+           form=AdviceForm(request.POST)
            return render(request,'FirstApp/AddExperience.html',{'forms':form,'message':"Your information has been saved"})
 
 

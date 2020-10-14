@@ -116,3 +116,17 @@ class CommentsandSuggestions(models.Model):
 
     def __str__(self):
         return self.Comments
+
+class Advice(models.Model):
+    Title=models.CharField(max_length=100)
+    Field=models.CharField(max_length=50)
+    Author=models.CharField(max_length=50)
+    Description=models.TextField()
+    Url=models.URLField(max_length=264)
+    Target_Audience =models.CharField(max_length=20, choices=FieldChoices)
+    Type=models.CharField(max_length=20)
+    Self_Email=models.EmailField(max_length=100)
+    Released_On=models.DateField()
+
+    def __str__(self):
+        return self.Title

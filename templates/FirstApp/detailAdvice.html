@@ -1,15 +1,15 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}<br><br>
-  <div >  Know about a good resource that you dont find on our website,<br>
+  <div >  Know about a good infomation resource that you dont find on our website,<br>
     Add it to the Website.<br><br></div>
 
-<div class="orange">  <a href="{% url 'FirstApp:AddResource' %}" class="button2">Add a resource</a><br><br></div>
+<div class="orange">  <a href="{% url 'FirstApp:AddExperience' %}" class="button2">Add a resource</a><br><br></div>
 
 <br><br>
 
-<b><div >Want excellent advice and guidance in {{field1}} field which would give you an edge<br>
- visit our Advice and experience page at</div></b> <br><br>
-<a href="{% url 'FirstApp:AdvicePathsExperienceResources' %}" class="button2">Visit the page</a>
+<b><div >Want excellent resources which would give you an edge.
+ </div></b> <br><br>
+<a href="{% url 'FirstApp:Professional_Development' %}" class="button2">Visit the page</a>
 <br><br><br>
 <h1>For College Students</h1>
 <hr>
@@ -26,7 +26,7 @@
         <b>Description :</b>{{resource.Description}}<br>
       <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
       <b>Type :</b>  {{resource.Type}}<br>
-        <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+        </div>
       </div>
       {%else%}
 
@@ -36,7 +36,7 @@
               <b>Description :</b>{{resource.Description}}<br>
             <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
             <b>Type :</b>  {{resource.Type}}<br>
-              <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+              </div>
             </div>
 
 
@@ -62,7 +62,7 @@
        <b>Description :</b>{{resource.Description}}<br>
      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
      <b>Type :</b>  {{resource.Type}}<br>
-       <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+       </div>
      </div>
      {%else%}
 
@@ -72,7 +72,7 @@
              <b>Description :</b>{{resource.Description}}<br>
            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
            <b>Type :</b>  {{resource.Type}}<br>
-             <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+            </div>
            </div>
 
 
@@ -101,7 +101,7 @@
        <b>Description :</b>{{resource.Description}}<br>
      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
      <b>Type :</b>  {{resource.Type}}<br>
-       <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+      </div>
      </div>
      {%else%}
 
@@ -111,7 +111,7 @@
              <b>Description :</b>{{resource.Description}}<br>
            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
            <b>Type :</b>  {{resource.Type}}<br>
-             <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+             </div>
            </div>
 
 
@@ -140,7 +140,7 @@
        <b>Description :</b>{{resource.Description}}<br>
      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
      <b>Type :</b>  {{resource.Type}}<br>
-       <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+       </div>
      </div>
      {%else%}
 
@@ -150,7 +150,7 @@
              <b>Description :</b>{{resource.Description}}<br>
            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
            <b>Type :</b>  {{resource.Type}}<br>
-             <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+             </div>
            </div>
 
 
@@ -178,7 +178,7 @@
        <b>Description :</b>{{resource.Description}}<br>
      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
      <b>Type :</b>  {{resource.Type}}<br>
-       <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+      </div>
      </div>
      {%else%}
 
@@ -188,7 +188,7 @@
              <b>Description :</b>{{resource.Description}}<br>
            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
            <b>Type :</b>  {{resource.Type}}<br>
-             <b>Cost</b>Indian Rupees : {{resource.Price}}<br></div>
+             </div>
            </div>
 
 

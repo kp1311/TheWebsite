@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^detail12345/$',views.detail12345,name='detail12345'),
     url(r'^DetailPersonalDevelopment/$',views.DetailPersonalDevelopmentView,name='DetailPersonalDevelopment'),
     url(r'^logout/$',views.user_logout,name='logout'),
+    url(r'^detailAdvice/$',views.detailAdvice,name='detailAdvice'),
 
 
 ]

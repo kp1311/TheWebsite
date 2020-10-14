@@ -1,44 +1,106 @@
-{%extends "FirstApp/Base.html"%}
-{%block Body_Block%}<br><br>
-<div class="advice">
-<a href="{%url 'FirstApp:AddExperience'%}" class="button2">Add your experience </a><br><br>
-Here we provide you advice and guidance form the people who are the best at what they do<br>
-<br>From the below Dropdown menu select the field for which you want the advice and guidance</br>
-<br></div><br>
-<div class="advice2">
-<form action="{%url 'FirstApp:ThePage'%}" >
 
-  <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-    <option selected="selected" disabled>Field</option>
-    <option >Backup</option>
-    <option >Bank_Po</option>
-    <option >Business</option>
-    <option >CAT</option>
-    <option >IAS</option>
-    <option >GMAT</option>
-    <option >Linux</option>
-    <option >Medical</option>
-    <option >Networking</option>
-    <option >Software development</option>
-    <option >SSC_CGL</option>
-    <option >Storage</option>
-    <option >Wintel</option>
-  </select>
-  <br><br>
-  <select name="Experience" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-    <option selected="selected" disabled>Experience level</option>
-    <option >College Students</option>
-    <option >0-2 yrs experience</option>
-    <option >2-5 yrs experience</option>
-    <option >5-10 yrs experience</option>
-    <option >10-15 yrs experience</option>
-    <option >15-20 yrs experience</option>
+{% extends "FirstApp/Base.html"%}
+{% load static %}
 
-  </select><br><br>
-  <input type="submit" class="btn btn-primary" value="Select">
+{%block Body_Block%}
+<br>
 
 
 
-</form>
+<div class="ProfessDev"><h1>Welcome to Important Information page</h1></div><br>
+<div class="Professionaldevbody"><h3>This page is for college students and working professionals.</h3></div><br>
+  <div class="Professionaldevbody"><h3>It contains important information for different<br>
+  field,information such as how to prepare for job,salary,scope etc.</h3><br>
+
+
 </div>
-  {%endblock%}
+<br><br>
+<div class="row">
+
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=Backup">Backup(Infra)</a></div><br>
+    <div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=Bank Po">Bank_Po</a></div><br>
+    <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div>
+  </div></div>
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=Data analyst">Data Analyst</a></div><br>
+   <div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div>
+</div>
+
+  </div>
+
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=Business">Business</a></div><br>
+      <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=CAT">CAT</a></div>
+<div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div>
+  </div>
+  </div>
+
+  <div class="column">
+    <div class="card2"><div> <a href="/detailAdvice/?field=Database">Database(Infra)</a></div><br>
+      <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div>
+  </div></div>
+<div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=GMAT">GMAT</a></div>
+<div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=IAS">IAS</a></div>
+ <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=Linux">Linux(Infra)</a></div>
+    <div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card2"> <div><a href="/detailAdvice/?field=Medical">Medical</a></div><br>
+  <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div></div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=Networking">Networking(Infra)</a></div><br>
+ <div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="card2"><div><a href="/detailAdvice/?field=Software development">Software_Developmemt</a></div><br>
+   <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div>
+  </div>
+</div>
+<div class="column">
+  <div class="card2"><div><a href="/detailAdvice/?field=SSC CGL">SSC_CGL</a></div><br>
+ <div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div></div>
+</div>
+<div class="column">
+  <div class="card2"><div><a href="/detailAdvice/?field=Storage">Storage</a></div><br>
+ <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div>
+</div>
+</div>
+<div class="column">
+  <div class="card2"><div><a href="/detailAdvice/?field=Swimming">Swimming</a></div><div>
+  <img src="{% static "images/advice1.png" %}" height=40px width=40px></div></div>
+</div>
+<div class="column">
+  <div class="card2"><div><a href="/detailAdvice/?field=Wintel">Wintel(Infra)</a></div>
+  <div><img src="{% static "images/advice2.jpg" %}" height=40px width=40px></div>
+</div>
+</div>
+<div class="column">
+  <div class="card2"><div><a href="/detailAdvice/?field=Law">Law</a></div><br>
+<div><img src="{% static "images/advice1.png" %}" height=40px width=40px></div></div>
+</div>
+
+
+</div>
+
+{%endblock%}
