@@ -1,9 +1,10 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}<br><br>
-  <div >  Know about a good resource that you dont find on our website,<br>
-    Add it to the Website.<br><br></div>
+  <div class="detailAdvice">  Know about a good resource that you dont find on our website,<br>
+    Add it to the Website.<br><br>
 
-<div class="orange">  <a href="{% url 'FirstApp:Add_Personal_Development_Resource' %}" class="button2">Add a resource</a><br><br></div>
+ <a href="{% url 'FirstApp:Add_Personal_Development_Resource' %}" class="button2">Add a resource</a><br><br></div>
+ <br><br>
 <div class="row">
   <ol>
 

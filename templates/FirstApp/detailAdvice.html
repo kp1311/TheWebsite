@@ -1,17 +1,17 @@
 {% extends "FirstApp/Base.html"%}
 {%block Body_Block%}<br><br>
-  <div >  Know about a good infomation resource that you dont find on our website,<br>
-    Add it to the Website.<br><br></div>
+  <div class="detailAdvice">  Know about a good infomation resource that you dont find on our website,<br>
+    Add it to the Website.<br><br>
 
-<div class="orange">  <a href="{% url 'FirstApp:AddExperience' %}" class="button2">Add a resource</a><br><br></div>
+  <a href="{% url 'FirstApp:AddExperience' %}" class="button2">Add a resource</a><br><br></div>
 
 <br><br>
 
-<b><div >Want excellent resources which would give you an edge.
- </div></b> <br><br>
+<b><div class="detailAdvice">Want excellent resources which would give you an edge.
+ </b> <br><br>
 <a href="{% url 'FirstApp:Professional_Development' %}" class="button2">Visit the page</a>
-<br><br><br>
-<h1>For College Students</h1>
+<br><br><br></div>
+<h1 class="detailAdvice2">For College Students</h1>
 <hr>
 <div class="row">
   <ol>
@@ -47,7 +47,7 @@
 </ol>
 </div>
 <br><br>
-<h1>For 0-2 Yrs Experience</h1>
+<h1 class="detailAdvice2">For 0-2 Yrs Experience</h1>
 <hr>
 <div class="row">
   <ol>
@@ -84,7 +84,7 @@
 </ol>
 </div>
 <br><br>
-<h1>For 5-10 Yrs Experience</h1>
+<h1 class="detailAdvice2">For 5-10 Yrs Experience</h1>
 
 <hr>
 <div class="row">
@@ -124,7 +124,7 @@
 <br><br>
 
 
-<h1>For 10-15 Yrs Experience</h1>
+<h1 class="detailAdvice2">For 10-15 Yrs Experience</h1>
 
 <hr>
 <div class="row">
@@ -162,7 +162,7 @@
 </div>
 <br><br>
 
-<h1>For 15-20 Yrs Experience</h1>
+<h1 class="detailAdvice2">For 15-20 Yrs Experience</h1>
 
 <hr>
 <div class="row">
