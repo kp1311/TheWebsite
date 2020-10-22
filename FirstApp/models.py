@@ -10,6 +10,15 @@ FieldChoices = (
     ('15-20 yrs experience','15-20 yrs experience'),
 )
 
+subtopicchoices=(
+    ('Scope and Salary','Scope and salary'),
+    ('What,how when to prepare','What,how when to prepare'),
+    ('From where to prepare','From where to prepare'),
+    ('How to apply for jobs','How to apply for jobs'),
+    ('Others','Others'),
+    ('Resume','Resume'),
+)
+
 # Create your models here.
 class Professional_Resources(models.Model):
     Title=models.CharField(max_length=100)
@@ -120,6 +129,7 @@ class CommentsandSuggestions(models.Model):
 class Advice(models.Model):
     Title=models.CharField(max_length=100)
     Field=models.CharField(max_length=50)
+    Subtopic=models.CharField(max_length=50,choices=subtopicchoices)
     Author=models.CharField(max_length=50)
     Description=models.TextField()
     Url=models.URLField(max_length=264)
@@ -130,3 +140,11 @@ class Advice(models.Model):
 
     def __str__(self):
         return self.Title
+
+
+class JobPortal(models.Model):
+    Name_of_portal= models.CharField(max_length=50)
+    URL =models.URLField(max_length=264)
+
+    def __str__(self):
+        return self.Name_of_portal

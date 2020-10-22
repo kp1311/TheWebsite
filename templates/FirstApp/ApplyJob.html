@@ -1,0 +1,40 @@
+{%extends "FirstApp/Base.html"%}
+
+{%block Body_Block%}<br>
+<div class="applyjob">Welcome to Apply for jobs page.</div><br>
+<div class="applyjob">Here you will find the top sites in which you can apply for jobs.</div><br>
+<div class="applyjob">One thing we would like to tell you is that all these websites work,and you <br>
+  can get a job by applying to any of these sites.But often times thousands of people<br>
+apply to one job posting which decreases your chances of getting that job,that being <br>
+said,you should still apply for jobs on these sites as they are free and who knows<br>
+from where you could get your opprtunity.Hoever we have a bias towards Linkedin,<br>
+which we consider to be the best place to apply for jobs,as the referral you get<br>
+ can there can be very helpful,we have a whole section on how to apply for jobs after<br>
+you have prepared for it in our .
+<a href="{% url 'FirstApp:AdvicePathsExperienceResources' %}" class="button2">Visit page</a> </div>
+<br>
+<div class="applyjob">Know a good job portal that you don't find on our website, add it to the webite.
+<a href="{% url 'FirstApp:AddJobPortal' %}"class=button2>Add Job Portal</a></div>
+<br>
+<div class="applyjob">
+Here is a list of job portals
+<br><br>
+
+<div class="applyjob">
+
+  {%for resources in resource%}
+  <div class="card20" style="width:40%;margin:10px auto">
+  <a href="{{resources.URL}}" > {{resources.Name_of_portal}} </a> <br><br>
+</div>
+  {%endfor%}
+
+</div>
+
+
+</div>
+<br><br>
+
+
+
+
+{%endblock%}

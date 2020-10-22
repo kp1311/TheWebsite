@@ -652,6 +652,28 @@ background-color:  rgba(11, 83, 140);
 
 }
 
+
+.card20 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+
+  border: 2px solid white;
+  border-radius: 15px;
+ box-shadow: 10px 10px 5px #aaaaaa;
+  horizontal-align:center;
+ vertical-align: center;
+  width: 200px;
+  height: 30px;
+  background-color: #0A5403 ;
+
+}
+
+.outer{
+
+margin: auto;
+
+
+}
 .card12:hover{
   -ms-transform: rotate(10deg); /* IE 9 */
   transform: rotate(10deg);
@@ -727,11 +749,26 @@ font-size: 18px;
   border-radius:15px;
   padding: 35px;
  background-image: linear-gradient(to top, rgba(255,255,255), #4169e1);
-  background-color:#046C05;
+
   color:black;
   box-shadow: 5px 10px 8px #888888;
 
 }
+.applyjob{
+  width:auto;
+  height:auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  border: 3px solid white;
+  border-radius:15px;
+  padding: 35px;
+  background-image: linear-gradient(to top, rgba(255,255,255), #4169e1);
+
+  color:black;
+  box-shadow: 5px 10px 8px #888888;
+
+}
+
 .detailAdvice2{
   font-family: 'Roboto', sans-serif;
   width:auto;
@@ -742,8 +779,23 @@ display: inline-block;
   border-radius:15px;
   padding: 35px;
  background-image: linear-gradient(to top, rgba(255,255,255), #4169e1);
-  background-color:#046C05;
+
   color:black;
+  box-shadow: 5px 10px 8px #888888;
+
+}
+.detailAdvice3{
+  font-family: 'Roboto', sans-serif;
+  width:auto;
+  height:auto;
+  font-size: 16px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius:15px;
+  padding: 10px;
+
+  background-color:#046C05;
+  color:white;
   box-shadow: 5px 10px 8px #888888;
 
 }

@@ -15,9 +15,11 @@
 <hr>
 <div class="row">
   <ol>
+<h4 class="detailAdvice3"> Scope and salary</h4>
   {%for resource in Resource%}
 
-  {%if resource.Target_Audience == 'College Students' %}
+  {%if resource.Target_Audience == 'College Students' and resource.Subtopic == 'Scope and salary' %}
+
 
    {%if resource.Price != 0 %}
         <div class="column">
@@ -40,80 +42,41 @@
             </div>
 
 
+{%endif%}
+{%endif%}
 
-{%endif%}
-{%endif%}
 {%endfor%}
 </ol>
 </div>
 <br><br>
-<h1 class="detailAdvice2">For 0-2 Yrs Experience</h1>
-<hr>
+<h4 class="detailAdvice3"> What,how and when to prepare</h4>
+
+
 <div class="row">
   <ol>
-   {%for resource in Resource%}
+{%for resource in Resource%}
 
- {%if resource.Target_Audience == '0-2 yrs experience' %}
+{%if resource.Target_Audience == 'College Students' and resource.Subtopic == 'What,how when to prepare'%}
 
-  {%if resource.Price != 0 %}
-       <div class="column">
-       <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
-       <b>Author :</b>{{resource.Author}}<br>
-       <b>Description :</b>{{resource.Description}}<br>
-     <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
-     <b>Type :</b>  {{resource.Type}}<br>
-       </div>
-     </div>
-     {%else%}
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
 
-             <div class="column">
-             <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
-             <b>Author :</b>{{resource.Author}}<br>
-             <b>Description :</b>{{resource.Description}}<br>
-           <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
-           <b>Type :</b>  {{resource.Type}}<br>
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
             </div>
-           </div>
-
-
-
-{%endif%}
-{%endif%}
-{%endfor%}
-
-</ol>
-</div>
-<br><br>
-<h1 class="detailAdvice2">For 5-10 Yrs Experience</h1>
-
-<hr>
-<div class="row">
-  <ol>
-
-   {%for resource in Resource%}
-
- {%if resource.Target_Audience == '5-10 yrs experience' %}
-
-  {%if resource.Price != 0 %}
-       <div class="column">
-       <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
-       <b>Author :</b>{{resource.Author}}<br>
-       <b>Description :</b>{{resource.Description}}<br>
-     <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
-     <b>Type :</b>  {{resource.Type}}<br>
-      </div>
-     </div>
-     {%else%}
-
-             <div class="column">
-             <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
-             <b>Author :</b>{{resource.Author}}<br>
-             <b>Description :</b>{{resource.Description}}<br>
-           <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
-           <b>Type :</b>  {{resource.Type}}<br>
-             </div>
-           </div>
-
+          </div>
 
 
 {%endif%}
@@ -123,15 +86,13 @@
 </div>
 <br><br>
 
+ <h4 class="detailAdvice3"> Resume</h4>
 
-<h1 class="detailAdvice2">For 10-15 Yrs Experience</h1>
-
-<hr>
 <div class="row">
   <ol>
-   {%for resource in Resource%}
+ {%for resource in Resource%}
 
- {%if resource.Target_Audience == '10-15 yrs experience' %}
+ {%if resource.Target_Audience == 'College Students' and resource.Subtopic == 'Resume' %}
 
   {%if resource.Price != 0 %}
        <div class="column">
@@ -154,6 +115,200 @@
            </div>
 
 
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+ <h4 class="detailAdvice3">From where to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == 'College Students' and resource.Subtopic == 'From where to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+<br><br>
+
+</div>
+<h4 class="detailAdvice3">How to apply for jobs</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == 'College Students' and resource.Subtopic == 'How to apply for jobs'%}
+
+
+
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">Others</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == 'College Students' and resource.Subtopic == 'Others' %}
+
+
+
+
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h1 class="detailAdvice2">For 0-2yrs experience</h1>
+<hr>
+<h4 class="detailAdvice3">Scope and Salary</h4>
+
+<div class="row">
+  <ol>
+ 
+  {%for resource in Resource%}
+
+  {%if resource.Target_Audience == '0-2 yrs experience' and resource.Subtopic == 'Scope and salary' %}
+
+
+
+
+
+   {%if resource.Price != 0 %}
+        <div class="column">
+        <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+        <b>Author :</b>{{resource.Author}}<br>
+        <b>Description :</b>{{resource.Description}}<br>
+      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+      <b>Type :</b>  {{resource.Type}}<br>
+        </div>
+      </div>
+      {%else%}
+
+              <div class="column">
+              <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+              <b>Author :</b>{{resource.Author}}<br>
+              <b>Description :</b>{{resource.Description}}<br>
+            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+            <b>Type :</b>  {{resource.Type}}<br>
+              </div>
+            </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">What,how and when to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '0-2 yrs experience' and resource.Subtopic == 'What,how when to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
 
 {%endif%}
 {%endif%}
@@ -162,14 +317,13 @@
 </div>
 <br><br>
 
-<h1 class="detailAdvice2">For 15-20 Yrs Experience</h1>
+<h4 class="detailAdvice3">Resume</h4>
 
-<hr>
 <div class="row">
   <ol>
-   {%for resource in Resource%}
+ {%for resource in Resource%}
 
- {%if resource.Target_Audience == '15-20 yrs experience' %}
+ {%if resource.Target_Audience == '0-2 yrs experience' and resource.Subtopic == 'Resume' %}
 
   {%if resource.Price != 0 %}
        <div class="column">
@@ -178,7 +332,7 @@
        <b>Description :</b>{{resource.Description}}<br>
      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
      <b>Type :</b>  {{resource.Type}}<br>
-      </div>
+       </div>
      </div>
      {%else%}
 
@@ -192,16 +346,1019 @@
            </div>
 
 
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">From where to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '0-2 yrs experience' and resource.Subtopic == 'From where to prepare'%}
+
+
+
+
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
 
 {%endif%}
 {%endif%}
 {%endfor%}
+</ol>
+<br><br>
 
-
-
-  </ol>
 </div>
-  <br><br>
+<h4 class="detailAdvice3">How to apply for jobs</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '0-2 yrs experience' and resource.Subtopic == 'How to apply for jobs'%}
 
 
-  {%endblock%}
+
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">Others</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '0-2 yrs experience' and resource.Subtopic == 'Others' %}
+
+
+
+
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+
+
+
+<h1 class="detailAdvice2">For 2-5 yrs Students</h1>
+<hr>
+<h4 class="detailAdvice3">Scope and Salary</h4>
+<div class="row">
+  <ol>
+
+  {%for resource in Resource%}
+
+  {%if resource.Target_Audience == '2-5 yrs experience' and resource.Subtopic == 'Scope and salary' %}
+
+
+
+
+
+   {%if resource.Price != 0 %}
+        <div class="column">
+        <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+        <b>Author :</b>{{resource.Author}}<br>
+        <b>Description :</b>{{resource.Description}}<br>
+      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+      <b>Type :</b>  {{resource.Type}}<br>
+        </div>
+      </div>
+      {%else%}
+
+              <div class="column">
+              <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+              <b>Author :</b>{{resource.Author}}<br>
+              <b>Description :</b>{{resource.Description}}<br>
+            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+            <b>Type :</b>  {{resource.Type}}<br>
+              </div>
+            </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">What,how and when to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '2-5 yrs experience' and resource.Subtopic == 'What,how when to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">Resume</h4>
+
+<div class="row">
+  <ol>
+ {%for resource in Resource%}
+
+ {%if resource.Target_Audience == '2-5 yrs experience' and resource.Subtopic == 'Resume' %}
+
+  {%if resource.Price != 0 %}
+       <div class="column">
+       <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+       <b>Author :</b>{{resource.Author}}<br>
+       <b>Description :</b>{{resource.Description}}<br>
+     <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+     <b>Type :</b>  {{resource.Type}}<br>
+       </div>
+     </div>
+     {%else%}
+
+             <div class="column">
+             <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+             <b>Author :</b>{{resource.Author}}<br>
+             <b>Description :</b>{{resource.Description}}<br>
+           <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+           <b>Type :</b>  {{resource.Type}}<br>
+             </div>
+           </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">From where to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '2-5 yrs experience' and resource.Subtopic == 'From where to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+<br><br>
+
+</div>
+<h4 class="detailAdvice3">How to apply for jobs</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '2-5 yrs experience' and resource.Subtopic == 'How to apply for jobs'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">Others</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '2-5 yrs experience' and resource.Subtopic == 'Others' %}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h1 class="detailAdvice2">For 5-10 yrs experience</h1>
+<hr>
+<h4 class="detailAdvice3">Scope and Salary</h4>
+<div class="row">
+  <ol>
+
+  {%for resource in Resource%}
+
+  {%if resource.Target_Audience == '5-10 yrs experience' and resource.Subtopic == 'Scope and salary' %}
+
+   {%if resource.Price != 0 %}
+        <div class="column">
+        <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+        <b>Author :</b>{{resource.Author}}<br>
+        <b>Description :</b>{{resource.Description}}<br>
+      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+      <b>Type :</b>  {{resource.Type}}<br>
+        </div>
+      </div>
+      {%else%}
+
+              <div class="column">
+              <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+              <b>Author :</b>{{resource.Author}}<br>
+              <b>Description :</b>{{resource.Description}}<br>
+            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+            <b>Type :</b>  {{resource.Type}}<br>
+              </div>
+            </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">What,how and when to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '5-10 yrs experience' and resource.Subtopic == 'What,how when to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">Resume</h4>
+<div class="row">
+  <ol>
+ {%for resource in Resource%}
+
+ {%if resource.Target_Audience == '5-10 yrs experience' and resource.Subtopic == 'Resume' %}
+
+
+
+
+
+  {%if resource.Price != 0 %}
+       <div class="column">
+       <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+       <b>Author :</b>{{resource.Author}}<br>
+       <b>Description :</b>{{resource.Description}}<br>
+     <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+     <b>Type :</b>  {{resource.Type}}<br>
+       </div>
+     </div>
+     {%else%}
+
+             <div class="column">
+             <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+             <b>Author :</b>{{resource.Author}}<br>
+             <b>Description :</b>{{resource.Description}}<br>
+           <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+           <b>Type :</b>  {{resource.Type}}<br>
+             </div>
+           </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">From where to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '5-10 yrs experience' and resource.Subtopic == 'From where to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+<br><br>
+
+</div>
+<h4 class="detailAdvice3">How to apply for jobs</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '5-10 yrs experience' and resource.Subtopic == 'How to apply for jobs'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">Others</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '5-10 yrs experience' and resource.Subtopic == 'Others' %}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+
+<h1 class="detailAdvice2">10-15yrs experience</h1>
+<hr>
+<h4 class="detailAdvice3">Scope and salary</h4>
+<div class="row">
+  <ol>
+
+  {%for resource in Resource%}
+
+  {%if resource.Target_Audience == '10-15 yrs experience' and resource.Subtopic == 'Scope and salary' %}
+
+   {%if resource.Price != 0 %}
+        <div class="column">
+        <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+        <b>Author :</b>{{resource.Author}}<br>
+        <b>Description :</b>{{resource.Description}}<br>
+      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+      <b>Type :</b>  {{resource.Type}}<br>
+        </div>
+      </div>
+      {%else%}
+
+              <div class="column">
+              <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+              <b>Author :</b>{{resource.Author}}<br>
+              <b>Description :</b>{{resource.Description}}<br>
+            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+            <b>Type :</b>  {{resource.Type}}<br>
+              </div>
+            </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">What,how and when to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '10-15 yrs experience' and resource.Subtopic == 'What,how when to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">Resume</h4>
+
+<div class="row">
+  <ol>
+ {%for resource in Resource%}
+
+ {%if resource.Target_Audience == '10-15 yrs experience' and resource.Subtopic == 'Resume' %}
+
+  {%if resource.Price != 0 %}
+       <div class="column">
+       <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+       <b>Author :</b>{{resource.Author}}<br>
+       <b>Description :</b>{{resource.Description}}<br>
+     <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+     <b>Type :</b>  {{resource.Type}}<br>
+       </div>
+     </div>
+     {%else%}
+
+             <div class="column">
+             <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+             <b>Author :</b>{{resource.Author}}<br>
+             <b>Description :</b>{{resource.Description}}<br>
+           <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+           <b>Type :</b>  {{resource.Type}}<br>
+             </div>
+           </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">From where to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '10-15 yrs experience' and resource.Subtopic == 'From where to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+<br><br>
+
+</div>
+<h4 class="detailAdvice3">How to apply for jobs</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '10-15 yrs experience' and resource.Subtopic == 'How to apply for jobs'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">Others</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '10-15 yrs experience' and resource.Subtopic == 'Others' %}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+
+<h1 class="detailAdvice2">For 15-20 yrs experience</h1>
+<hr>
+<h4 class="detailAdvice3">Scope and Salary</h4>
+<div class="row">
+  <ol>
+
+  {%for resource in Resource%}
+
+  {%if resource.Target_Audience == '15-20 yrs experience' and resource.Subtopic == 'Scope and salary' %}
+
+   {%if resource.Price != 0 %}
+        <div class="column">
+        <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+        <b>Author :</b>{{resource.Author}}<br>
+        <b>Description :</b>{{resource.Description}}<br>
+      <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+      <b>Type :</b>  {{resource.Type}}<br>
+        </div>
+      </div>
+      {%else%}
+
+              <div class="column">
+              <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+              <b>Author :</b>{{resource.Author}}<br>
+              <b>Description :</b>{{resource.Description}}<br>
+            <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+            <b>Type :</b>  {{resource.Type}}<br>
+              </div>
+            </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">What,how and when to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '15-20 yrs experience' and resource.Subtopic == 'What,how when to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+<h4 class="detailAdvice3">Resume</h4>
+
+<div class="row">
+  <ol>
+ {%for resource in Resource%}
+
+ {%if resource.Target_Audience == '15-20 yrs experience' and resource.Subtopic == 'Resume' %}
+
+  {%if resource.Price != 0 %}
+       <div class="column">
+       <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+       <b>Author :</b>{{resource.Author}}<br>
+       <b>Description :</b>{{resource.Description}}<br>
+     <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+     <b>Type :</b>  {{resource.Type}}<br>
+       </div>
+     </div>
+     {%else%}
+
+             <div class="column">
+             <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+             <b>Author :</b>{{resource.Author}}<br>
+             <b>Description :</b>{{resource.Description}}<br>
+           <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+           <b>Type :</b>  {{resource.Type}}<br>
+             </div>
+           </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">From where to prepare</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '15-20 yrs experience' and resource.Subtopic == 'From where to prepare'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+{%endfor%}
+</ol>
+<br><br>
+
+</div>
+<h4 class="detailAdvice3">How to apply for jobs</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '15-20 yrs experience' and resource.Subtopic == 'How to apply for jobs'%}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+<h4 class="detailAdvice3">Others</h4>
+
+<div class="row">
+  <ol>
+{%for resource in Resource%}
+
+{%if resource.Target_Audience == '15-20 yrs experience' and resource.Subtopic == 'Others' %}
+
+ {%if resource.Price != 0 %}
+      <div class="column">
+      <div class="card12"><li><b>Title :{{resource.Title}}</b></li>
+      <b>Author :</b>{{resource.Author}}<br>
+      <b>Description :</b>{{resource.Description}}<br>
+    <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+    <b>Type :</b>  {{resource.Type}}<br>
+      </div>
+    </div>
+    {%else%}
+
+            <div class="column">
+            <div class="card3"><li><b>Title :{{resource.Title}}</b></li>
+            <b>Author :</b>{{resource.Author}}<br>
+            <b>Description :</b>{{resource.Description}}<br>
+          <b>Url to resource :</b><a href="{{resource.Url}}" class="button2">Go to link</a><br>
+          <b>Type :</b>  {{resource.Type}}<br>
+            </div>
+          </div>
+
+
+{%endif%}
+{%endif%}
+
+{%endfor%}
+</ol>
+</div>
+<br><br>
+
+</div>
+
+{%endblock%}

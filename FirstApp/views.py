@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
-from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm,AdviceForm
-from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice
+from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm,AdviceForm,JobPortalForm
+from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal
 from datetime import date
 import datetime
 # Create your views here.
@@ -305,3 +305,22 @@ def CommentsAndSuggestionsView(request):
             return render(request,'FirstApp/CommentsAndSuggestions.html',{'forms':form,'message':"Your suggestions and comments have been recorded."})
 
     return render(request,'FirstApp/CommentsAndSuggestions.html',{'forms':form})
+
+
+def ApplyJob(request):
+    resource=JobPortal.objects.all().order_by('Name_of_portal')
+    return render(request,'FirstApp/ApplyJob.html',{'resource':resource})
+
+
+def AddJobPortal(request):
+    form=JobPortalForm()
+
+    if request.method=='POST':
+        form=JobPortalForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+
+            return render(request,'FirstApp/AddJobPortal.html',{'forms':form,'message':"Thanka for your input,your data has been saved."})
+
+    return render(request,'FirstApp/AddJobPortal.html',{'forms':form})

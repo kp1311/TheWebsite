@@ -26,6 +26,8 @@ urlpatterns = [
     url(r'^DetailPersonalDevelopment/$',views.DetailPersonalDevelopmentView,name='DetailPersonalDevelopment'),
     url(r'^logout/$',views.user_logout,name='logout'),
     url(r'^detailAdvice/$',views.detailAdvice,name='detailAdvice'),
+    url(r'^ApplyJob/$',views.ApplyJob,name='ApplyJob'),
+    url(r'^AddJobPortal/$',views.AddJobPortal,name='AddJobPortal'),
 
 
 ]
