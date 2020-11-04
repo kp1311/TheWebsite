@@ -1,0 +1,51 @@
+{%extends "FirstApp/Base.html"%}
+
+{%block Body_Block%}<br>
+<div class="ListOfCompany">
+
+<div class="Company2">Companies</div><br><br>
+<div class="Company3">Big</div><hr><br>
+{%for resources in resource%}
+{%if resources.Type == 'Company' and resources.Size == "Big" %}
+
+<div class="Company">{{resources.Nameofcompany}}</div>||
+<a href="{{resources.UrlToCareerPage}}" class='button2'>Apply here</a><br><br>
+{%endif%}
+
+{%endfor%}
+<br>
+<div class="Company3">Medium</div><hr><br><br>
+{%for resources in resource%}
+{%if resources.Type == 'Company' and resources.Size == "Medium"%}
+
+<div class="Company">{{resources.Nameofcompany}}</div>||
+<a href="{{resources.UrlToCareerPage}}" class='button2'>Apply here</a><br><br>
+{%endif%}
+
+{%endfor%}
+
+<br>
+<div class="Company3">Small</div><hr><br><br>
+{%for resources in resource%}
+{%if resources.Type == 'Company' and resources.Size == "Small" %}
+
+<div class="Company">{{resources.Nameofcompany}}</div>||
+<a href="{{resources.UrlToCareerPage}}" class='button2'>Apply here</a><br><br>
+{%endif%}
+
+{%endfor%}
+
+
+<br>
+<div class="Company2">Startups</div><hr><br>
+
+{%for resources in resource%}
+{%if resources.Type == 'Startup' %}
+
+<div class="Company">{{resources.Nameofcompany}}</div>||
+<a href="{{resources.UrlToCareerPage}}" class='button2'>Apply here</a><br><br>
+{%endif%}
+
+{%endfor%}
+</div>
+{%endblock%}

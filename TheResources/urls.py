@@ -28,6 +28,9 @@ urlpatterns = [
     url(r'^detailAdvice/$',views.detailAdvice,name='detailAdvice'),
     url(r'^ApplyJob/$',views.ApplyJob,name='ApplyJob'),
     url(r'^AddJobPortal/$',views.AddJobPortal,name='AddJobPortal'),
+    url(r'^CompanyAndStartup/$',views.CompanyAndStartup,name='CompanyAndStartup'),
+    url(r'^AddCompanyAndStartup/$',views.AddCompanyAndStartup,name='AddCompanyAndStartup'),
+    url(r'^ListOfCompanyOrStartup/$',views.ListOfCompanyOrStartup,name='ListOfCompanyOrStartup'),
 
 
 ]

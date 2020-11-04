@@ -1,7 +1,7 @@
 from django import forms
 from FirstApp.models import (Professional_Resources,Personal_Development_Resources,
                              Financial_Success_Resources,MyGoal,MyLibrary,
-                             Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal)
+                             Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal,CompanyOrStartup)
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -99,4 +99,9 @@ class AdviceForm(forms.ModelForm):
 class JobPortalForm(forms.ModelForm):
     class Meta:
         model=JobPortal
+        fields="__all__"
+
+class CompanyOrStartupForm(forms.ModelForm):
+    class Meta:
+        model=CompanyOrStartup
         fields="__all__"

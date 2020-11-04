@@ -19,6 +19,45 @@ subtopicchoices=(
     ('Resume','Resume'),
 )
 
+TypeOfCompany=(
+
+('Company','Company'),
+('Startup','Startup'),
+
+)
+
+SizeOfCompany=(
+
+('Big','Big'),
+('Medium','Medium'),
+('Small','Small'),
+('Is a startup','Is a startup'),
+
+)
+
+FieldOfCompany=(
+('Software','Software'),
+('Data Analyst','Data Anlayst'),
+('other','other'),
+('Backup','Backup'),
+('Bank_Po','Bank_Po'),
+
+
+
+('Linux','Linux'),
+('Medical','Medical'),
+('Networking','Networking'),
+
+
+('Storage','Storage'),
+('Wintel','Wintel'),
+
+
+
+
+)
+
+
 # Create your models here.
 class Professional_Resources(models.Model):
     Title=models.CharField(max_length=100)
@@ -148,3 +187,13 @@ class JobPortal(models.Model):
 
     def __str__(self):
         return self.Name_of_portal
+
+class CompanyOrStartup(models.Model):
+    Nameofcompany=models.CharField(max_length=75)
+    Field=models.CharField(max_length=75,choices=FieldOfCompany)
+    Type=models.CharField(max_length=50,choices=TypeOfCompany)
+    Size=models.CharField(max_length=50,choices=SizeOfCompany)
+    UrlToCareerPage=models.URLField(max_length=264)
+
+    def __str__(self):
+        return self.Nameofcompany

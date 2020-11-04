@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
-from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm,AdviceForm,JobPortalForm
-from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal
+from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm,AdviceForm,JobPortalForm,CompanyOrStartupForm
+from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal,CompanyOrStartup
 from datetime import date
 import datetime
 # Create your views here.
@@ -321,6 +321,32 @@ def AddJobPortal(request):
         if form.is_valid():
             form.save(commit=True)
 
-            return render(request,'FirstApp/AddJobPortal.html',{'forms':form,'message':"Thanka for your input,your data has been saved."})
+            return render(request,'FirstApp/AddJobPortal.html',{'forms':form,'message':"Thanks for your input,your data has been saved."})
 
     return render(request,'FirstApp/AddJobPortal.html',{'forms':form})
+
+def CompanyAndStartup(request):
+    return render(request,'FirstApp/CompanyAndStartup.html')
+
+
+def AddCompanyAndStartup(request):
+    form=CompanyOrStartupForm()
+
+    if request.method=='POST':
+        form=CompanyOrStartupForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+
+            return render(request,'FirstApp/AddCompanyAndStartup.html',{'forms':form,'message':"Thanks for your input,your data has been saved."})
+
+    return render(request,'FirstApp/AddCompanyAndStartup.html',{'forms':form})
+
+
+
+
+
+def ListOfCompanyOrStartup(request):
+    field_variable=request.GET['field_selected']
+    resource=CompanyOrStartup.objects.filter(Field=field_variable).order_by('Nameofcompany')
+    return render(request,'FirstApp/ListOfCompanyOrStartup.html',{'resource':resource})

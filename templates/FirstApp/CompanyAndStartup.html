@@ -1,0 +1,34 @@
+{% extends "FirstApp/Base.html"%}
+{% load bootstrap3 %}
+
+
+{%block Body_Block%}<br><br><br>
+
+<div class="CompanyAndStartup">Know about a Company or startup that you dont find on our website,add it to <br>
+to the website.<a href="{% url 'FirstApp:AddCompanyAndStartup' %}"class=button2>Add Company or startup.</a></div>
+<br><br>
+<div class="CompanyAndStartup">Select in which field you want the company or startup.
+<br><br>
+<div >
+    <form action="{%url 'FirstApp:ListOfCompanyOrStartup'%}" >
+
+      <select name="field_selected" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <option selected="selected" disabled>Field</option>
+        <option >Backup</option>
+        <option >Bank_Po</option>
+
+
+        <option >Linux</option>
+        <option >Medical</option>
+        <option >Networking</option>
+        <option >Software</option>
+
+        <option >Storage</option>
+        <option >Wintel</option>
+      </select><br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+</div>
+
+{%endblock%}
