@@ -1,6 +1,22 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+
+##############################################################################################
+#############################       Review Model     #########################################
+##############################################################################################
+
+from django.utils import timezone
+
+
+
+
+
+
+
+
+
 FieldChoices = (
     ('College Students','College Students'),
     ('0-2 yrs experience', '0-2 yrs experience'),
@@ -197,3 +213,44 @@ class CompanyOrStartup(models.Model):
 
     def __str__(self):
         return self.Nameofcompany
+
+
+##############################################################################################
+#############################       Review Model     #########################################
+##############################################################################################
+
+
+class ReviewModel(models.Model):
+        reviewer_name=models.CharField(max_length=200)
+        review_textarea=models.TextField(blank=False)
+        reviewed_date=models.DateTimeField(default=timezone.now)
+
+
+        def __str__(self):
+            return self.reviewer_name
+
+
+class AppreciatedReviewModel(models.Model):
+    reviewer_name = models.CharField(max_length=200)
+    review_textarea = models.TextField(blank=False)
+    reviewed_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.reviewer_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
