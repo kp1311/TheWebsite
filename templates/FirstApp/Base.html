@@ -18,8 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static "css/mystyle.css"%}">
+
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{% static "css/mystyle.css"%}">
+      <!-- font awesome-->
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Facebook Pixel Code -->
@@ -43,6 +47,8 @@ src="https://www.facebook.com/tr?id=3039286256176574&ev=PageView&noscript=1"
 
 
   <body >
+<!--  top scroll button-->
+  <a><i class="fas fa-arrow-circle-up fa-3x topbtn"></i></a>
 <div id="header">
 <div class="container" >
 
@@ -135,11 +141,27 @@ job or increase you income by 2x,3x,4x,5x or 10x.<br><br>
   <a href="{% url 'FirstApp:ContactUs' %}">Contact us</a>  ||
   <a href="{% url 'FirstApp:ShareUs' %}">Share with friends and family</a>  ||
   <a href="{% url 'FirstApp:CommentsAndSuggestions' %}">Leave a feedback</a>  ||
-
+    <a href="{% url 'FirstApp:review' %}">Review</a>
 </footer>
 
 
 </div>
 </div>
+   <!-- // top button js by Nilesh Mare-->
+            <script>
+                const topbutton = document.querySelector('.topbtn');
+                topbutton.addEventListener('click',function(){
+                        window.scrollTo({
+                            top:0,
+                            left:0,
+                            behavior:"smooth"
+
+                        });
+
+                });
+
+            </script>
+        <!--  // end of top buttom js-->
+
   </body>
 </html>
