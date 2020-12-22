@@ -37,6 +37,7 @@ url(r'^AddJobPortal/$',views.AddJobPortal,name='AddJobPortal'),
 url(r'^CompanyAndStartup/$',views.CompanyAndStartup,name='CompanyAndStartup'),
 url(r'^AddCompanyAndStartup/$',views.AddCompanyAndStartup,name='AddCompanyAndStartup'),
 url(r'^ListOfCompanyOrStartup/$',views.ListOfCompanyOrStartup,name='ListOfCompanyOrStartup'),
+url(r'^Review/',views.reviewSite,name='review'),
 
 
 ]
