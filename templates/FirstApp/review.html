@@ -1,0 +1,39 @@
+{%extends "FirstApp/Base.html"%}
+{%block Body_Block%}
+    <!-- REVIEW WEBPAGE-->
+    <h1 class="headerstyless">Hi!!, Write your review below.</h1>
+    <hr>
+    <form class="form" method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+        <br>
+<h2 class="h2css">Reviews that we appreciate:</h2>
+    <div class="bordertable">
+
+            {%for review in appreciated%}
+                    <div class="borderrow">
+                            <p><b>Name:</b> {{review.reviewer_name}}</p>
+                            <p><b>Review:</b> {{review.review_textarea}}</p>
+                            <p>Reviewed on {{review.reviewed_date}}</p>
+                    </div>
+            {%endfor%}
+
+    </div>
+        <h2 class="h2css">Reviews by the visitors:</h2>
+    <div class="bordertable">
+
+            {%for review in allreview%}
+                    <div class="borderrow">
+                            <p><b>Name:</b> {{review.reviewer_name}}</p>
+                            <p><b>Review:</b> {{review.review_textarea}}</p>
+                            <p>Reviewed on {{review.reviewed_date}}</p>
+                    </div>
+            {%endfor%}
+
+    </div>
+
+
+{%endblock%}

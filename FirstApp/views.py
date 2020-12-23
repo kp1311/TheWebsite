@@ -1,7 +1,7 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse,HttpResponseRedirect
-from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm,AdviceForm,JobPortalForm,CompanyOrStartupForm
-from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal,CompanyOrStartup
+from FirstApp.forms import RegisterForm,ProfessionalResourcesForm,Personal_Development_ResourcesForm,Financial_Success_ResourcesForm,UserForm,MyGoalForm,MyLibraryForm,Challenge2Form,Challenge1Form,AddExperienceForm,CommentsandSuggestionsForm,AdviceForm,JobPortalForm,CompanyOrStartupForm,ReviewForm,AppreciatedReviewForm
+from FirstApp.models import Professional_Resources,Personal_Development_Resources,Financial_Success_Resources,MyGoal,MyLibrary,Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal,CompanyOrStartup,ReviewModel,AppreciatedReviewModel
 from datetime import date
 import datetime
 # Create your views here.
@@ -350,3 +350,27 @@ def ListOfCompanyOrStartup(request):
     field_variable=request.GET['field_selected']
     resource=CompanyOrStartup.objects.filter(Field=field_variable).order_by('Nameofcompany')
     return render(request,'FirstApp/ListOfCompanyOrStartup.html',{'resource':resource})
+
+
+
+##############################################################################################
+#############################       Review Model     #########################################
+##############################################################################################
+
+def reviewSite(request):
+
+    all_reviews=ReviewModel.objects.all().order_by('-reviewed_date')
+    appreciated_reviews=AppreciatedReviewModel.objects.all().order_by('-reviewed_date')
+    forme=ReviewForm()
+
+    if request.method=='POST':
+        forme=ReviewForm(request.POST)
+
+        if forme.is_valid():
+            forme.save(commit=True)
+            all_reviews = ReviewModel.objects.all().order_by('-reviewed_date')
+            return render(request,'FirstApp/review.html',{'form':forme,'allreview':all_reviews,'appreciated':appreciated_reviews})
+
+
+    return render(request,'FirstApp/review.html',{'form':forme,'allreview':all_reviews,'appreciated':appreciated_reviews})
+

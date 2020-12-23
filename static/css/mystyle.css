@@ -6,11 +6,58 @@ body {
     text-align: center;
 }
 
-
 form {
     display: inline-block;
 
 }
+/* Top button*/
+.topbtn{
+    position:fixed;
+    right: 10px;
+    bottom:10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    box-shadows: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+
+
+/*review table*/
+
+.headerstyless{
+    color:rgb(71, 127, 201);
+}
+.h2css{
+    color:rgb(71, 127, 201);
+    text-align:left;
+}
+.bordertable{
+
+
+
+}
+div.bordertable > div:nth-of-type(odd)
+{
+
+        background-color: rgb(167, 200, 232);
+
+}
+.borderrow{
+
+    background-color:rgb(138, 175, 212);
+    border-radius:20px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+
 /* unvisited link */
 a:link {
   color: white;
@@ -45,6 +92,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 
 
 }

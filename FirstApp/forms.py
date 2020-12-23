@@ -1,7 +1,7 @@
 from django import forms
 from FirstApp.models import (Professional_Resources,Personal_Development_Resources,
                              Financial_Success_Resources,MyGoal,MyLibrary,
-                             Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal,CompanyOrStartup)
+                             Challenge1,Challenge2,AddExperience,CommentsandSuggestions,Advice,JobPortal,CompanyOrStartup,ReviewModel,AppreciatedReviewModel)
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -105,3 +105,42 @@ class CompanyOrStartupForm(forms.ModelForm):
     class Meta:
         model=CompanyOrStartup
         fields="__all__"
+
+
+
+
+##############################################################################################
+#############################       Review Form      #########################################
+##############################################################################################
+
+
+class ReviewForm(forms.ModelForm):
+    class Meta():
+        model=ReviewModel
+        fields=('reviewer_name','review_textarea')
+
+        widgets={
+
+                'reviewer_name':forms.TextInput(attrs={'class':'form-control',
+                                                       'placeholder':'Enter your euphoric name',}),
+
+                'review_textarea':forms.Textarea(attrs={'class':'form-control',
+                                                        'rows':'4',
+                                                        'placeholder':'Type your review here'}),
+        }
+
+
+class AppreciatedReviewForm(forms.ModelForm):
+    class Meta():
+        model=AppreciatedReviewModel
+        fields=('reviewer_name','review_textarea')
+
+        widgets={
+
+                'reviewer_name':forms.TextInput(attrs={'class':'form-control',
+                                                       'placeholder':'Enter your euphoric name',}),
+
+                'review_textarea':forms.Textarea(attrs={'class':'form-control',
+                                                        'rows':'4',
+                                                        'placeholder':'Type your review here'}),
+        }
